@@ -1,0 +1,585 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Brand guide · Collaborative Women&#x27;s Care</title>
+<link rel="icon" type="image/png" href="assets/img/cwc-logo-transparent.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Josefin+Sans:wght@600&family=Lora:wght@600&family=Nunito+Sans:wght@400;700&display=swap">
+<link rel="stylesheet" href="assets/css/site.css">
+<script src="assets/js/gate.js"></script>
+<script>CWCGate.guard();</script>
+<style>
+
+html, body { height: 100%; }
+body { display: flex; flex-direction: column; background: #EFEAE2; overflow: hidden; }
+.stage { flex: 1 1 auto; min-height: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; padding: 20px; }
+#deck { position: relative; }
+#deck .s { border-radius: 14px; overflow: hidden; box-shadow: 0 2px 6px rgba(27,46,74,.08), 0 18px 48px rgba(27,46,74,.14); background: #FAF7F2; }
+.scaler { width: 1920px; height: 1080px; transform-origin: 0 0; }
+.slide { position: relative; width: 1920px; height: 1080px; overflow: hidden; box-sizing: border-box; }
+.slide * { margin: 0; box-sizing: border-box; }
+.slide ul, .slide ol { padding-left: 1.2em; }
+.slide table { border-collapse: collapse; }
+.slide svg { display: block; }
+.notes { max-width: 1100px; width: 100%; font-size: 14px; color: var(--slate); background: #fff; border-radius: 12px; padding: 10px 16px; border: 1px solid var(--line); }
+.notes b { color: var(--navy); }
+.navbtn { width: 44px; height: 44px; border-radius: 50%; border: 1px solid rgba(139,187,218,.5); background: transparent; color: #fff; font-size: 18px; cursor: pointer; }
+.navbtn:hover:not(:disabled) { background: var(--navy-card); }
+.navbtn:disabled { opacity: .35; cursor: default; }
+.counter { font-variant-numeric: tabular-nums; color: #fff; font-weight: 700; min-width: 64px; text-align: center; }
+.section-label { color: var(--sky); font-size: 13px; }
+.grid { position: fixed; inset: 64px 0 0 0; background: #EFEAE2; overflow: auto; padding: 28px; display: none; z-index: 40; }
+.grid.open { display: block; }
+.grid-inner { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 22px; }
+.thumb { border: 0; padding: 0; background: none; text-align: left; cursor: pointer; font: inherit; color: var(--navy); display: flex; flex-direction: column; gap: 8px; }
+.thumb .tv { position: relative; width: 100%; aspect-ratio: 16/9; overflow: hidden; border-radius: 10px; box-shadow: 0 1px 2px rgba(27,46,74,.08), 0 6px 18px rgba(27,46,74,.1); background: #FAF7F2; }
+.thumb .tv .scaler { position: absolute; left: 0; top: 0; }
+.thumb[aria-current="true"] .tv { outline: 3px solid var(--blue); outline-offset: 3px; }
+.thumb span { font-size: 13px; }
+.thumb span b { color: var(--blue); margin-right: 6px; }
+@media (max-width: 700px) { .reviewbar .tip, .section-label { display: none; } .stage { padding: 12px; } }
+
+</style>
+</head>
+<body>
+<header class="reviewbar" style="min-height:64px">
+  <div class="left">
+    <a class="back" href="index.html">← Overview</a>
+    <span class="title">Brand guide</span>
+    <span class="section-label" id="section"></span>
+  </div>
+  <div class="right">
+    <span class="tip"><b>← →</b> to page · <b>G</b> for all pages</span>
+    <button class="navbtn" id="prev" type="button" aria-label="Previous page">←</button>
+    <span class="counter" id="counter" aria-live="polite"></span>
+    <button class="navbtn" id="next" type="button" aria-label="Next page">→</button>
+    <div class="seg"><button type="button" id="gridbtn" aria-pressed="false">All pages</button></div>
+  </div>
+</header>
+<main class="stage" id="stage">
+  <div id="deck">
+<div class="s" data-n="1" data-title="Collaborative Women&#x27;s Care" data-section="Why a guide, and what changes from today" data-notes="This is a proposal for the practice to review. The logo is unchanged; everything else is recommended." hidden><div class="scaler"><section class="slide" id="slide-cover" data-transition="fade" style="background:#FAF7F2; color:#1B2E4A; font-family:'Nunito Sans', Arial, sans-serif; padding:128px; display:flex; flex-direction:column; justify-content:center; gap:32px">
+<svg aria-label="Soft sky and blush color washes" style="position:absolute; left:0px; top:0px; width:1920px; height:1080px" width="1920" height="1080" viewBox="0 0 1920 1080">
+<defs>
+<radialGradient id="cv-sky"><stop offset="0" stop-color="#8BBBDA" stop-opacity="0.85"/><stop offset="1" stop-color="#8BBBDA" stop-opacity="0"/></radialGradient>
+<radialGradient id="cv-blush"><stop offset="0" stop-color="#E7C6BC" stop-opacity="0.9"/><stop offset="1" stop-color="#E7C6BC" stop-opacity="0"/></radialGradient>
+<radialGradient id="cv-mist"><stop offset="0" stop-color="#E8F2F8" stop-opacity="1"/><stop offset="1" stop-color="#E8F2F8" stop-opacity="0"/></radialGradient>
+</defs>
+<circle cx="1760" cy="140" r="620" fill="url(#cv-sky)"/>
+<circle cx="1900" cy="1000" r="520" fill="url(#cv-blush)"/>
+<circle cx="120" cy="1060" r="460" fill="url(#cv-mist)"/>
+<circle cx="1440" cy="540" r="330" fill="#FAF7F2"/>
+</svg>
+<img src="assets/img/cwc-logo-transparent.png" alt="Collaborative Women's Care logo" style="position:absolute; left:1195px; top:290px; width:490px; height:500px; object-fit:contain">
+<p style="font-family:'Josefin Sans', Arial, sans-serif; font-size:24px; font-weight:600; letter-spacing:5px; color:#285A7C; width:900px">BRAND GUIDE · PROPOSAL</p>
+<h1 style="font-family:'Cormorant Garamond', Georgia, serif; font-size:120px; font-weight:600; line-height:0.95; color:#1B2E4A; width:900px">Collaborative<br>Women's Care</h1>
+<p style="font-size:32px; line-height:1.4; color:#4A5561; width:820px">One logo, one palette and one type system, used the same way everywhere.</p>
+<p style="position:absolute; left:128px; bottom:64px; width:900px; font-size:24px; color:#4A5561">Prepared for the Collaborative Women's Care team · September 2026</p>
+
+</section>
+</div></div>
+<div class="s" data-n="2" data-title="Keep the logo. Bring everything else into line with it." data-section="Why a guide, and what changes from today" data-notes="" hidden><div class="scaler"><section class="slide" id="slide-purpose" data-transition="fade" style="background:#1B2E4A; color:#FAF7F2; font-family:'Nunito Sans', Arial, sans-serif; padding:128px 128px 160px; display:flex; flex-direction:column; justify-content:space-between; gap:48px">
+<div style="display:flex; flex-direction:column; gap:32px">
+<p style="font-family:'Josefin Sans', Arial, sans-serif; font-size:24px; font-weight:600; letter-spacing:5px; color:#8BBBDA">WHY THIS GUIDE</p>
+<h2 style="font-family:'Cormorant Garamond', Georgia, serif; font-size:88px; font-weight:600; line-height:1.05; color:#FAF7F2; width:1500px">Keep the logo. Bring everything else into line with it.</h2>
+<p style="font-size:32px; line-height:1.45; color:#C9D3DC; width:1300px">Today the website, social posts and printed pieces each look a little different. This guide keeps the seal exactly as it is and builds a warmer, more consistent brand around its two blues and its leaf shapes.</p>
+</div>
+<div style="display:flex; gap:32px">
+<div style="flex:1; display:flex; flex-direction:column; gap:12px; border-top:2px solid #8BBBDA; padding:32px 0px 0px 0px">
+<h3 style="font-size:32px; font-weight:700; color:#FAF7F2">Keep</h3>
+<p style="font-size:24px; line-height:1.45; color:#C9D3DC">The seal, its navy and sky-blue inks, and the site's trusted button blue.</p>
+</div>
+<div style="flex:1; display:flex; flex-direction:column; gap:12px; border-top:2px solid #8BBBDA; padding:32px 0px 0px 0px">
+<h3 style="font-size:32px; font-weight:700; color:#FAF7F2">Consolidate</h3>
+<p style="font-size:24px; line-height:1.45; color:#C9D3DC">Three unrelated fonts become one system; scattered grays and blues become eight named colors.</p>
+</div>
+<div style="flex:1; display:flex; flex-direction:column; gap:12px; border-top:2px solid #E7C6BC; padding:32px 0px 0px 0px">
+<h3 style="font-size:32px; font-weight:700; color:#FAF7F2">Add</h3>
+<p style="font-size:24px; line-height:1.45; color:#C9D3DC">Warmth: a cream background and one blush accent, so the brand feels caring, not clinical.</p>
+</div>
+</div>
+<div style="position:absolute; left:128px; bottom:64px; width:1664px; display:flex; justify-content:space-between"><p style="font-size:24px; color:#8FA0B0">Collaborative Women's Care · Brand Guide</p><p style="font-size:24px; color:#8FA0B0">02</p></div>
+</section>
+</div></div>
+<div class="s" data-n="3" data-title="What changes, at a glance" data-section="Why a guide, and what changes from today" data-notes="" hidden><div class="scaler"><section class="slide" id="slide-changes" data-transition="fade" style="background:#FAF7F2; color:#1B2E4A; font-family:'Nunito Sans', Arial, sans-serif; padding:128px 128px 160px; display:flex; flex-direction:column; gap:40px">
+<p style="font-family:'Josefin Sans', Arial, sans-serif; font-size:24px; font-weight:600; letter-spacing:5px; color:#285A7C">CONSOLIDATION</p>
+<h2 style="font-family:'Cormorant Garamond', Georgia, serif; font-size:72px; font-weight:600; line-height:1.05; color:#1B2E4A">What changes, at a glance</h2>
+<table style="width:1664px; font-size:26px; line-height:1.35; border-collapse:collapse">
+<tr><th style="text-align:left; padding:16px 24px 16px 0px; width:260px; color:#4A5561; font-weight:700; border-bottom:2px solid #1B2E4A">Area</th><th style="text-align:left; padding:16px 24px; color:#4A5561; font-weight:700; border-bottom:2px solid #1B2E4A">Today</th><th style="text-align:left; padding:16px 24px; color:#285A7C; font-weight:700; border-bottom:2px solid #1B2E4A">Proposed</th></tr>
+<tr><td style="padding:18px 24px 18px 0px; font-weight:700; border-bottom:1px solid #DCD6CC">Logo</td><td style="padding:18px 24px; color:#4A5561; border-bottom:1px solid #DCD6CC">Seal inside a wide JPEG with extra white space</td><td style="padding:18px 24px; border-bottom:1px solid #DCD6CC">Same seal, cropped square, plus a transparent version</td></tr>
+<tr><td style="padding:18px 24px 18px 0px; font-weight:700; border-bottom:1px solid #DCD6CC">Fonts</td><td style="padding:18px 24px; color:#4A5561; border-bottom:1px solid #DCD6CC">Raleway, Open Sans and Lato: three unrelated faces</td><td style="padding:18px 24px; border-bottom:1px solid #DCD6CC">Three free fonts, each with one clear job</td></tr>
+<tr><td style="padding:18px 24px 18px 0px; font-weight:700; border-bottom:1px solid #DCD6CC">Color</td><td style="padding:18px 24px; color:#4A5561; border-bottom:1px solid #DCD6CC">Button blue, a default web-link blue, assorted grays</td><td style="padding:18px 24px; border-bottom:1px solid #DCD6CC">Eight named colors, all drawn from or tuned to the logo</td></tr>
+<tr><td style="padding:18px 24px 18px 0px; font-weight:700; border-bottom:1px solid #DCD6CC">Buttons</td><td style="padding:18px 24px; color:#4A5561; border-bottom:1px solid #DCD6CC">Square and pill shapes mixed, all capitals</td><td style="padding:18px 24px; border-bottom:1px solid #DCD6CC">Pill buttons in sentence case: "Book online"</td></tr>
+<tr><td style="padding:18px 24px 18px 0px; font-weight:700; border-bottom:1px solid #DCD6CC">Backgrounds</td><td style="padding:18px 24px; color:#4A5561; border-bottom:1px solid #DCD6CC">Flat white on every page</td><td style="padding:18px 24px; border-bottom:1px solid #DCD6CC">Warm cream, with pale-blue sections to separate content</td></tr>
+</table>
+<div style="position:absolute; left:128px; bottom:64px; width:1664px; display:flex; justify-content:space-between"><p style="font-size:24px; color:#4A5561">Collaborative Women's Care · Brand Guide</p><p style="font-size:24px; color:#4A5561">03</p></div>
+</section>
+</div></div>
+<div class="s" data-n="4" data-title="The seal stays exactly as it is" data-section="The logo, unchanged, and how to use it" data-notes="" hidden><div class="scaler"><section class="slide" id="slide-logo" data-transition="fade" style="background:#FAF7F2; color:#1B2E4A; font-family:'Nunito Sans', Arial, sans-serif; padding:128px 128px 160px; display:flex; flex-direction:column; gap:40px">
+<p style="font-family:'Josefin Sans', Arial, sans-serif; font-size:24px; font-weight:600; letter-spacing:5px; color:#285A7C">LOGO</p>
+<h2 style="font-family:'Cormorant Garamond', Georgia, serif; font-size:72px; font-weight:600; line-height:1.05; color:#1B2E4A">The seal stays exactly as it is</h2>
+<div style="display:flex; gap:32px">
+<div style="flex:1; display:flex; flex-direction:column; gap:20px">
+<div style="height:440px; background:#FFFFFF; border:1px solid #DCD6CC; border-radius:24px; display:flex; align-items:center; justify-content:center"><img src="assets/img/cwc-logo-transparent.png" alt="Logo on white" style="width:340px; height:347px; object-fit:contain"></div>
+<p style="font-size:24px; line-height:1.4; color:#4A5561"><b style="color:#1B2E4A">On white.</b> Forms, email, documents.</p>
+</div>
+<div style="flex:1; display:flex; flex-direction:column; gap:20px">
+<div style="height:440px; background:#FAF7F2; border:1px solid #DCD6CC; border-radius:24px; display:flex; align-items:center; justify-content:center"><img src="assets/img/cwc-logo-transparent.png" alt="Logo on cream" style="width:340px; height:347px; object-fit:contain"></div>
+<p style="font-size:24px; line-height:1.4; color:#4A5561"><b style="color:#1B2E4A">On cream. Preferred.</b> Website, social, print.</p>
+</div>
+<div style="flex:1; display:flex; flex-direction:column; gap:20px">
+<div style="height:440px; background:#1B2E4A; border-radius:24px; display:flex; align-items:center; justify-content:center"><div style="width:390px; height:390px; background:#FAF7F2; border-radius:195px; display:flex; align-items:center; justify-content:center"><img src="assets/img/cwc-logo-transparent.png" alt="Logo inside a cream circle on navy" style="width:320px; height:327px; object-fit:contain"></div></div>
+<p style="font-size:24px; line-height:1.4; color:#4A5561"><b style="color:#1B2E4A">On navy.</b> Always inside a cream circle; the navy leaves disappear otherwise.</p>
+</div>
+</div>
+<div style="position:absolute; left:128px; bottom:64px; width:1664px; display:flex; justify-content:space-between"><p style="font-size:24px; color:#4A5561">Collaborative Women's Care · Brand Guide</p><p style="font-size:24px; color:#4A5561">04</p></div>
+</section>
+</div></div>
+<div class="s" data-n="5" data-title="Give it room, and never alter it" data-section="The logo, unchanged, and how to use it" data-notes="" hidden><div class="scaler"><section class="slide" id="slide-logo-rules" data-transition="fade" style="background:#FAF7F2; color:#1B2E4A; font-family:'Nunito Sans', Arial, sans-serif; padding:128px 128px 160px; display:flex; flex-direction:column; gap:40px">
+<p style="font-family:'Josefin Sans', Arial, sans-serif; font-size:24px; font-weight:600; letter-spacing:5px; color:#285A7C">LOGO</p>
+<h2 style="font-family:'Cormorant Garamond', Georgia, serif; font-size:72px; font-weight:600; line-height:1.05; color:#1B2E4A">Give it room, and never alter it</h2>
+<div style="display:flex; gap:64px">
+<div style="width:520px; height:520px; background:#FFFFFF; border-radius:24px; display:flex; align-items:center; justify-content:center">
+<div style="width:420px; height:428px; border:2px dashed #285A7C; display:flex; align-items:center; justify-content:center"><img src="assets/img/cwc-logo-transparent.png" alt="Logo with clear-space boundary" style="width:340px; height:347px; object-fit:contain"></div>
+</div>
+<div style="flex:1; display:flex; flex-direction:column; gap:28px">
+<div style="display:flex; gap:32px">
+<div style="flex:1; display:flex; flex-direction:column; gap:10px">
+<h3 style="font-size:32px; font-weight:700">Clear space</h3>
+<p style="font-size:24px; line-height:1.45; color:#4A5561">One ring-letter height on every side (the dashed line). No text or edges inside it.</p>
+</div>
+<div style="flex:1; display:flex; flex-direction:column; gap:10px">
+<h3 style="font-size:32px; font-weight:700">Minimum size</h3>
+<p style="font-size:24px; line-height:1.45; color:#4A5561">96 px wide on screen, 1 inch in print. Smaller, the ring lettering blurs.</p>
+</div>
+</div>
+<div style="display:flex; flex-direction:column; gap:14px; background:#FFFFFF; border-radius:24px; padding:36px">
+<h3 style="font-size:32px; font-weight:700; color:#285A7C">Don't</h3>
+<ul style="font-size:24px; line-height:1.5; color:#1B2E4A">
+<li>Recolor it, or set it in a single color</li>
+<li>Stretch, squash, rotate or crop into the ring</li>
+<li>Add shadows, outlines, glows or gradients</li>
+<li>Place it on photos, mid-tone colors or navy without the cream circle</li>
+<li>Retype the practice name beside it in another font</li>
+</ul>
+</div>
+</div>
+</div>
+<div style="position:absolute; left:128px; bottom:64px; width:1664px; display:flex; justify-content:space-between"><p style="font-size:24px; color:#4A5561">Collaborative Women's Care · Brand Guide</p><p style="font-size:24px; color:#4A5561">05</p></div>
+</section>
+</div></div>
+<div class="s" data-n="6" data-title="Color palette" data-section="Color palette, balance and soft washes" data-notes="Navy is a true navy, lighter than the logo&#x27;s own near-black ink, which stays in the logo file only. Sky is measured from the logo. Blue is the website&#x27;s button color and is now the only blue for buttons and links. Blush is the one warm accent." hidden><div class="scaler"><section class="slide" id="slide-palette" data-transition="fade" style="background:#FAF7F2; color:#1B2E4A; font-family:'Nunito Sans', Arial, sans-serif; padding:128px 128px 160px; display:flex; flex-direction:column; gap:32px">
+<h2 style="font-family:'Cormorant Garamond', Georgia, serif; font-size:72px; font-weight:600; line-height:1.05; color:#1B2E4A">Color palette</h2>
+<div style="display:flex; gap:32px">
+<div style="width:900px; display:flex; flex-direction:column; gap:16px">
+<p style="font-family:'Josefin Sans', Arial, sans-serif; font-size:24px; font-weight:600; letter-spacing:5px; color:#285A7C">PRIMARY</p>
+<div style="height:292px; background:#1B2E4A; border-radius:24px; padding:32px; display:flex; flex-direction:column; justify-content:space-between">
+<h3 style="font-size:32px; font-weight:700; color:#FAF7F2">Navy</h3>
+<p style="font-size:24px; line-height:1.5; color:#C9D3DC">HEX #1B2E4A · RGB 27, 46, 74 · CMYK 64, 38, 0, 71 · PMS ≈ 534 C<br>Text, headings, footers and deep bands</p>
+</div>
+<div style="height:292px; background:#8BBBDA; border-radius:24px; padding:32px; display:flex; flex-direction:column; justify-content:space-between">
+<h3 style="font-size:32px; font-weight:700; color:#1B2E4A">Sky · from the logo</h3>
+<p style="font-size:24px; line-height:1.5; color:#1B2E4A">HEX #8BBBDA · RGB 139, 187, 218 · CMYK 36, 14, 0, 15 · PMS ≈ 543 C<br>Washes, shapes and dividers; text only on Navy</p>
+</div>
+</div>
+<div style="flex:1; display:flex; flex-direction:column; gap:16px">
+<p style="font-family:'Josefin Sans', Arial, sans-serif; font-size:24px; font-weight:600; letter-spacing:5px; color:#285A7C">SECONDARY</p>
+<div style="display:flex; gap:16px">
+<div style="flex:1; height:600px; background:#285A7C; border-radius:24px; padding:28px; display:flex; flex-direction:column; justify-content:space-between">
+<h3 style="font-size:32px; font-weight:700; color:#FFFFFF">Blue</h3>
+<p style="font-size:24px; line-height:1.5; color:#FFFFFF">#285A7C<br>40, 90, 124<br>68, 27, 0, 51<br>Buttons, links, labels, icons</p>
+</div>
+<div style="flex:1; height:600px; background:#E7C6BC; border-radius:24px; padding:28px; display:flex; flex-direction:column; justify-content:space-between">
+<h3 style="font-size:32px; font-weight:700; color:#1B2E4A">Blush</h3>
+<p style="font-size:24px; line-height:1.5; color:#1B2E4A">#E7C6BC<br>231, 198, 188<br>0, 14, 19, 9<br>Warm panels only, never text</p>
+</div>
+</div>
+</div>
+</div>
+<div style="position:absolute; left:128px; bottom:64px; width:1664px; display:flex; justify-content:space-between"><p style="font-size:24px; color:#4A5561">Pantone values are nearest matches; confirm on press.</p><p style="font-size:24px; color:#4A5561">06</p></div>
+
+</section>
+</div></div>
+<div class="s" data-n="7" data-title="Neutrals, and how much of each" data-section="Color palette, balance and soft washes" data-notes="" hidden><div class="scaler"><section class="slide" id="slide-balance" data-transition="fade" style="background:#FAF7F2; color:#1B2E4A; font-family:'Nunito Sans', Arial, sans-serif; padding:128px 128px 160px; display:flex; flex-direction:column; gap:36px">
+<h2 style="font-family:'Cormorant Garamond', Georgia, serif; font-size:72px; font-weight:600; line-height:1.05; color:#1B2E4A">Neutrals, and how much of each</h2>
+<div style="display:flex; gap:16px">
+<div style="flex:1; height:190px; background:#FAF7F2; border:2px solid #DCD6CC; border-radius:24px; padding:24px; display:flex; flex-direction:column; justify-content:space-between"><h3 style="font-size:28px; font-weight:700">Cream</h3><p style="font-size:24px; color:#4A5561">#FAF7F2 · Page background</p></div>
+<div style="flex:1; height:190px; background:#FFFFFF; border:2px solid #DCD6CC; border-radius:24px; padding:24px; display:flex; flex-direction:column; justify-content:space-between"><h3 style="font-size:28px; font-weight:700">White</h3><p style="font-size:24px; color:#4A5561">#FFFFFF · Cards, forms</p></div>
+<div style="flex:1; height:190px; background:#E8F2F8; border-radius:24px; padding:24px; display:flex; flex-direction:column; justify-content:space-between"><h3 style="font-size:28px; font-weight:700">Pale Blue</h3><p style="font-size:24px; color:#4A5561">#E8F2F8 · Sections</p></div>
+<div style="flex:1; height:190px; background:#4A5561; border-radius:24px; padding:24px; display:flex; flex-direction:column; justify-content:space-between"><h3 style="font-size:28px; font-weight:700; color:#FFFFFF">Slate</h3><p style="font-size:24px; color:#FFFFFF">#4A5561 · Secondary text</p></div>
+</div>
+<div style="display:flex; flex-direction:column; gap:14px">
+<h3 style="font-size:28px; font-weight:700">A typical page</h3>
+<div style="display:flex; height:72px; border-radius:36px; border:2px solid #DCD6CC">
+<div style="width:1080px; background:#FAF7F2; border-radius:36px 0px 0px 36px"></div>
+<div style="width:330px; background:#1B2E4A"></div>
+<div style="width:130px; background:#285A7C"></div>
+<div style="width:70px; background:#8BBBDA"></div>
+<div style="width:50px; background:#E7C6BC; border-radius:0px 36px 36px 0px"></div>
+</div>
+<div style="display:flex"><p style="width:1080px; font-size:24px; color:#4A5561">Cream, White and Pale Blue · about 65%</p><p style="width:330px; font-size:24px; color:#4A5561">Navy · 20%</p><p style="width:250px; font-size:24px; color:#4A5561">Blue, Sky, Blush</p></div>
+</div>
+<div style="display:flex; gap:16px">
+<p style="flex:1; font-size:24px; background:#FFFFFF; border-radius:16px; padding:20px 24px"><b>Navy on Cream</b> · 12.8:1</p>
+<p style="flex:1; font-size:24px; background:#285A7C; color:#FFFFFF; border-radius:16px; padding:20px 24px"><b>White on Blue</b> · 7.4:1</p>
+<p style="flex:1; font-size:24px; background:#1B2E4A; color:#8BBBDA; border-radius:16px; padding:20px 24px"><b>Sky on Navy</b> · 6.7:1</p>
+<p style="flex:1.3; font-size:24px; background:#FFFFFF; color:#1B2E4A; border-radius:16px; padding:20px 24px; border:2px solid #8BBBDA"><b>Sky on Cream</b> · 1.9:1, decoration only</p>
+</div>
+<div style="position:absolute; left:128px; bottom:64px; width:1664px; display:flex; justify-content:space-between"><p style="font-size:24px; color:#4A5561">Text pairs meet WCAG AA (4.5:1), except where marked. Star ratings use Blue.</p><p style="font-size:24px; color:#4A5561">07</p></div>
+</section>
+</div></div>
+<div class="s" data-n="8" data-title="Soft color washes" data-section="Color palette, balance and soft washes" data-notes="" hidden><div class="scaler"><section class="slide" id="slide-washes" data-transition="fade" style="background:#FAF7F2; color:#1B2E4A; font-family:'Nunito Sans', Arial, sans-serif; padding:128px 128px 160px; display:flex; flex-direction:column; gap:36px">
+<h2 style="font-family:'Cormorant Garamond', Georgia, serif; font-size:72px; font-weight:600; line-height:1.05; color:#1B2E4A">Soft color washes</h2>
+<div style="display:flex; gap:32px">
+<div style="flex:1; display:flex; flex-direction:column; gap:16px">
+<svg aria-label="Sky wash: cream with a soft sky-blue glow" width="392" height="480" viewBox="0 0 392 480"><defs><radialGradient id="w1a"><stop offset="0" stop-color="#8BBBDA"/><stop offset="1" stop-color="#8BBBDA" stop-opacity="0"/></radialGradient><radialGradient id="w1b"><stop offset="0" stop-color="#E8F2F8"/><stop offset="1" stop-color="#E8F2F8" stop-opacity="0"/></radialGradient><clipPath id="w1c"><rect width="392" height="480" rx="24"/></clipPath></defs><g clip-path="url(#w1c)"><rect width="392" height="480" fill="#FAF7F2"/><circle cx="360" cy="80" r="330" fill="url(#w1a)"/><circle cx="40" cy="460" r="260" fill="url(#w1b)"/></g></svg>
+<h3 style="font-size:28px; font-weight:700">Sky wash</h3>
+<p style="font-size:24px; line-height:1.4; color:#4A5561">Web heroes, social backgrounds</p>
+</div>
+<div style="flex:1; display:flex; flex-direction:column; gap:16px">
+<svg aria-label="Navy depth: navy with a blue and sky glow" width="392" height="480" viewBox="0 0 392 480"><defs><radialGradient id="w2a"><stop offset="0" stop-color="#285A7C"/><stop offset="1" stop-color="#285A7C" stop-opacity="0"/></radialGradient><radialGradient id="w2b"><stop offset="0" stop-color="#8BBBDA" stop-opacity="0.7"/><stop offset="1" stop-color="#8BBBDA" stop-opacity="0"/></radialGradient><clipPath id="w2c"><rect width="392" height="480" rx="24"/></clipPath></defs><g clip-path="url(#w2c)"><rect width="392" height="480" fill="#1B2E4A"/><circle cx="60" cy="60" r="340" fill="url(#w2a)"/><circle cx="330" cy="200" r="200" fill="url(#w2b)"/></g></svg>
+<h3 style="font-size:28px; font-weight:700">Navy depth</h3>
+<p style="font-size:24px; line-height:1.4; color:#4A5561">Quotes, announcements, footers</p>
+</div>
+<div style="flex:1; display:flex; flex-direction:column; gap:16px">
+<svg aria-label="Blush wash: cream with blush and a touch of sky" width="392" height="480" viewBox="0 0 392 480"><defs><radialGradient id="w3a"><stop offset="0" stop-color="#E7C6BC"/><stop offset="1" stop-color="#E7C6BC" stop-opacity="0"/></radialGradient><radialGradient id="w3b"><stop offset="0" stop-color="#8BBBDA" stop-opacity="0.6"/><stop offset="1" stop-color="#8BBBDA" stop-opacity="0"/></radialGradient><clipPath id="w3c"><rect width="392" height="480" rx="24"/></clipPath></defs><g clip-path="url(#w3c)"><rect width="392" height="480" fill="#FAF7F2"/><circle cx="300" cy="420" r="340" fill="url(#w3a)"/><circle cx="40" cy="40" r="220" fill="url(#w3b)"/></g></svg>
+<h3 style="font-size:28px; font-weight:700">Blush wash</h3>
+<p style="font-size:24px; line-height:1.4; color:#4A5561">Pregnancy, wellness, testimonials</p>
+</div>
+<div style="flex:1; display:flex; flex-direction:column; gap:16px">
+<svg aria-label="Dusk: navy into blush and sky" width="392" height="480" viewBox="0 0 392 480"><defs><radialGradient id="w4a"><stop offset="0" stop-color="#E7C6BC" stop-opacity="0.85"/><stop offset="1" stop-color="#E7C6BC" stop-opacity="0"/></radialGradient><radialGradient id="w4b"><stop offset="0" stop-color="#8BBBDA"/><stop offset="1" stop-color="#8BBBDA" stop-opacity="0"/></radialGradient><clipPath id="w4c"><rect width="392" height="480" rx="24"/></clipPath></defs><g clip-path="url(#w4c)"><rect width="392" height="480" fill="#285A7C"/><circle cx="380" cy="470" r="300" fill="url(#w4a)"/><circle cx="20" cy="120" r="280" fill="url(#w4b)"/></g></svg>
+<h3 style="font-size:28px; font-weight:700">Dusk</h3>
+<p style="font-size:24px; line-height:1.4; color:#4A5561">Section dividers, event posts</p>
+</div>
+</div>
+<div style="position:absolute; left:128px; bottom:64px; width:1664px; display:flex; justify-content:space-between"><p style="font-size:24px; color:#4A5561">Keep text on the calm part of a wash; keep the logo on cream or white.</p><p style="font-size:24px; color:#4A5561">08</p></div>
+</section>
+</div></div>
+<div class="s" data-n="9" data-title="type" data-section="The approved fonts, and the alternates considered" data-notes="Why: Cormorant&#x27;s fine strokes echo the logo&#x27;s thin line-art leaves. Nunito Sans is soft and very legible. Josefin Sans&#x27;s geometric capitals are the closest free match to the ring lettering." hidden><div class="scaler"><section class="slide" id="slide-type" data-transition="fade" style="background:#FAF7F2; color:#1B2E4A; font-family:'Nunito Sans', Arial, sans-serif; padding:128px 128px 160px; display:flex; flex-direction:column; gap:36px">
+<p style="font-family:'Josefin Sans', Arial, sans-serif; font-size:24px; font-weight:600; letter-spacing:5px; color:#285A7C">TYPOGRAPHY · RECOMMENDED</p>
+<div style="display:flex; gap:64px">
+<div style="width:620px; display:flex; flex-direction:column; gap:28px">
+<div style="display:flex; gap:28px; align-items:center; border-bottom:1px solid #DCD6CC; padding:0px 0px 20px 0px">
+<p style="font-family:'Cormorant Garamond', Georgia, serif; font-size:120px; font-weight:600; line-height:1; width:170px">Aa</p>
+<div style="display:flex; flex-direction:column; gap:6px"><h3 style="font-size:32px; font-weight:700">Cormorant Garamond</h3><p style="font-size:24px; color:#4A5561">Headlines · SemiBold</p></div>
+</div>
+<div style="display:flex; gap:28px; align-items:center; border-bottom:1px solid #DCD6CC; padding:0px 0px 20px 0px">
+<p style="font-size:110px; font-weight:400; line-height:1; width:170px">Aa</p>
+<div style="display:flex; flex-direction:column; gap:6px"><h3 style="font-size:32px; font-weight:700">Nunito Sans</h3><p style="font-size:24px; color:#4A5561">Subheads, body, buttons · Regular, Bold</p></div>
+</div>
+<div style="display:flex; gap:28px; align-items:center">
+<p style="font-family:'Josefin Sans', Arial, sans-serif; font-size:100px; font-weight:600; line-height:1; width:170px">Aa</p>
+<div style="display:flex; flex-direction:column; gap:6px"><h3 style="font-size:32px; font-weight:700">Josefin Sans</h3><p style="font-size:24px; color:#4A5561">Eyebrow labels only · SemiBold, spaced capitals</p></div>
+</div>
+</div>
+<div style="flex:1; display:flex; flex-direction:column; gap:22px; background:#FFFFFF; border-radius:24px; padding:48px">
+<p style="font-family:'Josefin Sans', Arial, sans-serif; font-size:24px; font-weight:600; letter-spacing:5px; color:#285A7C">WHAT WE OFFER</p>
+<p style="font-family:'Cormorant Garamond', Georgia, serif; font-size:84px; font-weight:600; line-height:1; color:#1B2E4A">For you. With you.</p>
+<p style="font-size:34px; font-weight:700; line-height:1.3; color:#1B2E4A">Personalized OB-GYN care in Miami</p>
+<p style="font-size:26px; line-height:1.55; color:#4A5561">From well-woman exams to 3D/4D ultrasounds, our team partners with every patient to pursue health and wellness, in a warm and caring environment.</p>
+</div>
+</div>
+<div style="position:absolute; left:128px; bottom:64px; width:1664px; display:flex; justify-content:space-between"><p style="font-size:24px; color:#4A5561">All three are free on Google Fonts and work on the website, Canva and Word.</p><p style="font-size:24px; color:#4A5561">09</p></div>
+
+</section>
+</div></div>
+<div class="s" data-n="10" data-title="Our pick, and two alternates" data-section="The approved fonts, and the alternates considered" data-notes="" hidden><div class="scaler"><section class="slide" id="slide-type-options" data-transition="fade" style="background:#E8F2F8; color:#1B2E4A; font-family:'Nunito Sans', Arial, sans-serif; padding:128px 128px 160px; display:flex; flex-direction:column; gap:36px">
+<p style="font-family:'Josefin Sans', Arial, sans-serif; font-size:24px; font-weight:600; letter-spacing:5px; color:#285A7C">TYPOGRAPHY · OPTIONS TO CONSIDER</p>
+<h2 style="font-family:'Cormorant Garamond', Georgia, serif; font-size:72px; font-weight:600; line-height:1.05">Our pick, and two alternates</h2>
+<div style="display:flex; gap:32px">
+<div style="flex:1; display:flex; flex-direction:column; gap:20px; background:#FFFFFF; border:3px solid #285A7C; border-radius:24px; padding:40px">
+<p style="font-size:24px; font-weight:700; color:#285A7C">A · Selected</p>
+<p style="font-family:'Cormorant Garamond', Georgia, serif; font-size:64px; font-weight:600; line-height:1">For you. With you.</p>
+<p style="font-size:26px; line-height:1.5; color:#4A5561">Cormorant Garamond + Nunito Sans. Elegant and personal; the thin strokes match the logo's line-art.</p>
+</div>
+<div style="flex:1; display:flex; flex-direction:column; gap:20px; background:#FFFFFF; border-radius:24px; padding:40px">
+<p style="font-size:24px; font-weight:700; color:#4A5561">B · Warm classic</p>
+<p style="font-family:'Lora', Georgia, serif; font-size:56px; font-weight:600; line-height:1.05">For you. With you.</p>
+<p style="font-size:26px; line-height:1.5; color:#4A5561">Lora + Nunito Sans. Sturdier serif that holds up better at small sizes and on print.</p>
+</div>
+<div style="flex:1; display:flex; flex-direction:column; gap:20px; background:#FFFFFF; border-radius:24px; padding:40px">
+<p style="font-size:24px; font-weight:700; color:#4A5561">C · Modern</p>
+<p style="font-family:'Josefin Sans', Arial, sans-serif; font-size:52px; font-weight:600; line-height:1.1">For you. With you.</p>
+<p style="font-size:26px; line-height:1.5; color:#4A5561">Josefin Sans + Nunito Sans. All sans-serif, closest to the logo's lettering; cleaner but less warm.</p>
+</div>
+</div>
+<div style="position:absolute; left:128px; bottom:64px; width:1664px; display:flex; justify-content:space-between"><p style="font-size:24px; color:#4A5561">Body text is Nunito Sans in every option, so only the headlines change.</p><p style="font-size:24px; color:#4A5561">10</p></div>
+</section>
+</div></div>
+<div class="s" data-n="11" data-title="Website building blocks" data-section="Website elements, icons and photography" data-notes="" hidden><div class="scaler"><section class="slide" id="slide-ui" data-transition="fade" style="background:#FAF7F2; color:#1B2E4A; font-family:'Nunito Sans', Arial, sans-serif; padding:128px 128px 160px; display:flex; flex-direction:column; gap:36px">
+<p style="font-family:'Josefin Sans', Arial, sans-serif; font-size:24px; font-weight:600; letter-spacing:5px; color:#285A7C">UI ELEMENTS</p>
+<h2 style="font-family:'Cormorant Garamond', Georgia, serif; font-size:72px; font-weight:600; line-height:1.05">Website building blocks</h2>
+<div style="display:flex; gap:48px">
+<div style="width:760px; display:flex; flex-direction:column; gap:32px">
+<div style="display:flex; flex-direction:column; gap:16px">
+<p style="font-size:24px; font-weight:700; color:#4A5561">Buttons</p>
+<div style="display:flex; gap:20px; align-items:center">
+<p style="font-size:26px; font-weight:700; background:#285A7C; color:#FFFFFF; border-radius:36px; padding:18px 40px">Book online</p>
+<p style="font-size:26px; font-weight:700; color:#285A7C; border:2px solid #285A7C; border-radius:36px; padding:16px 38px">Call 305-200-3878</p>
+</div>
+<p style="font-size:26px; font-weight:700; color:#285A7C"><u>View all services</u> →</p>
+</div>
+<div style="display:flex; flex-direction:column; gap:12px">
+<p style="font-size:24px; font-weight:700; color:#4A5561">Form field</p>
+<p style="font-size:24px; font-weight:700">Your name</p>
+<p style="font-size:26px; color:#4A5561; background:#FFFFFF; border:2px solid #7B8691; border-radius:6px; padding:16px 20px; width:560px">First and last name</p>
+</div>
+<div style="display:flex; flex-direction:column; gap:12px">
+<p style="font-size:24px; font-weight:700; color:#4A5561">Rating</p>
+<p style="font-size:30px; font-weight:700"><span style="color:#285A7C">★★★★★</span> 4.94 out of 5 · 481 reviews</p>
+</div>
+</div>
+<div style="flex:1; display:flex; flex-direction:column; gap:18px; background:#FFFFFF; border:1px solid #DCD6CC; border-radius:24px; padding:44px">
+<p style="font-size:24px; font-weight:700; color:#4A5561">Service card</p>
+<div style="height:180px; background:#E8F2F8; border-radius:12px; display:flex; align-items:center; justify-content:center"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:72px; height:72px; color:#285A7C"><path d="M9 12h.01 M15 12h.01 M10 16c.5.3 1.2.5 2 .5s1.5-.2 2-.5 M19 6.3a9 9 0 0 1 1.8 3.9 2 2 0 0 1 0 3.6 9 9 0 0 1-17.6 0 2 2 0 0 1 0-3.6A9 9 0 0 1 12 3c2 0 3.5 1.1 3.5 2.5s-.9 2.5-2 2.5c-.8 0-1.5-.4-1.5-1"/></svg></div>
+<p style="font-family:'Josefin Sans', Arial, sans-serif; font-size:24px; font-weight:600; letter-spacing:4px; color:#285A7C">OBSTETRICS</p>
+<h3 style="font-size:32px; font-weight:700">3D/4D ultrasound imaging</h3>
+<p style="font-size:24px; line-height:1.5; color:#4A5561">See your baby in rich detail during pregnancy, in our Miami office.</p>
+<p style="font-size:24px; font-weight:700; color:#285A7C"><u>Learn more</u> →</p>
+</div>
+</div>
+<div style="position:absolute; left:128px; bottom:64px; width:1664px; display:flex; justify-content:space-between"><p style="font-size:24px; color:#4A5561">Pill buttons are 48 px tall or more; every control gets a visible focus ring in Blue.</p><p style="font-size:24px; color:#4A5561">11</p></div>
+</section>
+</div></div>
+<div class="s" data-n="12" data-title="Light lines, real people" data-section="Website elements, icons and photography" data-notes="" hidden><div class="scaler"><section class="slide" id="slide-icons" data-transition="fade" style="background:#FAF7F2; color:#1B2E4A; font-family:'Nunito Sans', Arial, sans-serif; padding:128px 128px 160px; display:flex; flex-direction:column; gap:36px">
+<p style="font-family:'Josefin Sans', Arial, sans-serif; font-size:24px; font-weight:600; letter-spacing:5px; color:#285A7C">ICONS &amp; PHOTOGRAPHY</p>
+<h2 style="font-family:'Cormorant Garamond', Georgia, serif; font-size:72px; font-weight:600; line-height:1.05">Light lines, real people</h2>
+<div style="display:flex; gap:64px">
+<div style="width:700px; display:flex; flex-direction:column; gap:28px">
+<div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:24px">
+<div style="display:flex; flex-direction:column; align-items:center; gap:12px"><div style="width:120px; height:120px; border-radius:60px; background:#E8F2F8; display:flex; align-items:center; justify-content:center"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:56px; height:56px; color:#285A7C"><path d="M3 4h18v18H3z M16 2v4 M8 2v4 M3 10h18"/></svg></div><p style="font-size:24px">Book</p></div>
+<div style="display:flex; flex-direction:column; align-items:center; gap:12px"><div style="width:120px; height:120px; border-radius:60px; background:#E8F2F8; display:flex; align-items:center; justify-content:center"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:56px; height:56px; color:#285A7C"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></div><p style="font-size:24px">Call</p></div>
+<div style="display:flex; flex-direction:column; align-items:center; gap:12px"><div style="width:120px; height:120px; border-radius:60px; background:#E8F2F8; display:flex; align-items:center; justify-content:center"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:56px; height:56px; color:#285A7C"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z M12 7a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/></svg></div><p style="font-size:24px">Visit</p></div>
+<div style="display:flex; flex-direction:column; align-items:center; gap:12px"><div style="width:120px; height:120px; border-radius:60px; background:#F4E4DF; display:flex; align-items:center; justify-content:center"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:56px; height:56px; color:#285A7C"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg></div><p style="font-size:24px">Care</p></div>
+<div style="display:flex; flex-direction:column; align-items:center; gap:12px"><div style="width:120px; height:120px; border-radius:60px; background:#F4E4DF; display:flex; align-items:center; justify-content:center"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:56px; height:56px; color:#285A7C"><path d="M9 12h.01 M15 12h.01 M10 16c.5.3 1.2.5 2 .5s1.5-.2 2-.5 M19 6.3a9 9 0 0 1 1.8 3.9 2 2 0 0 1 0 3.6 9 9 0 0 1-17.6 0 2 2 0 0 1 0-3.6A9 9 0 0 1 12 3c2 0 3.5 1.1 3.5 2.5s-.9 2.5-2 2.5c-.8 0-1.5-.4-1.5-1"/></svg></div><p style="font-size:24px">Pregnancy</p></div>
+<div style="display:flex; flex-direction:column; align-items:center; gap:12px"><div style="width:120px; height:120px; border-radius:60px; background:#E8F2F8; display:flex; align-items:center; justify-content:center"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:56px; height:56px; color:#285A7C"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z M12 6v6l4 2"/></svg></div><p style="font-size:24px">Hours</p></div>
+</div>
+<p style="font-size:24px; line-height:1.5; color:#4A5561">Thin outline icons (1.5 px stroke, rounded ends) to match the logo's line-art, in Blue on a soft Pale Blue or Blush circle. No filled, 3D or emoji-style icons.</p>
+</div>
+<div style="flex:1; display:flex; flex-direction:column; gap:20px">
+<div style="display:flex; flex-direction:column; gap:8px; background:#FFFFFF; border-radius:20px; padding:28px 32px"><h3 style="font-size:30px; font-weight:700">Real people, natural light</h3><p style="font-size:24px; line-height:1.45; color:#4A5561">Dr. Valdes, the care team and the office itself, never generic stock.</p></div>
+<div style="display:flex; flex-direction:column; gap:8px; background:#FFFFFF; border-radius:20px; padding:28px 32px"><h3 style="font-size:30px; font-weight:700">Warm, candid moments</h3><p style="font-size:24px; line-height:1.45; color:#4A5561">Conversations, reassurance, expectant families. Soft, warm color grading.</p></div>
+<div style="display:flex; flex-direction:column; gap:8px; background:#FFFFFF; border-radius:20px; padding:28px 32px"><h3 style="font-size:30px; font-weight:700; color:#285A7C">Avoid</h3><p style="font-size:24px; line-height:1.45; color:#4A5561">Staged handshakes, cold blue filters, heavy retouching, clinical close-ups.</p></div>
+</div>
+</div>
+<div style="position:absolute; left:128px; bottom:64px; width:1664px; display:flex; justify-content:space-between"><p style="font-size:24px; color:#4A5561">Collaborative Women's Care · Brand Guide</p><p style="font-size:24px; color:#4A5561">12</p></div>
+</section>
+</div></div>
+<div class="s" data-n="13" data-title="Collateral examples" data-section="Collateral examples and next steps" data-notes="" hidden><div class="scaler"><section class="slide" id="slide-collateral" data-transition="fade" style="background:#1B2E4A; color:#FAF7F2; font-family:'Nunito Sans', Arial, sans-serif; padding:128px; display:flex; flex-direction:column; justify-content:flex-end; gap:24px">
+<svg aria-label="Navy background with sky and blush glows" style="position:absolute; left:0px; top:0px; width:1920px; height:1080px" width="1920" height="1080" viewBox="0 0 1920 1080">
+<defs>
+<radialGradient id="cl-a"><stop offset="0" stop-color="#285A7C"/><stop offset="1" stop-color="#285A7C" stop-opacity="0"/></radialGradient>
+<radialGradient id="cl-b"><stop offset="0" stop-color="#8BBBDA" stop-opacity="0.8"/><stop offset="1" stop-color="#8BBBDA" stop-opacity="0"/></radialGradient>
+<radialGradient id="cl-c"><stop offset="0" stop-color="#E7C6BC" stop-opacity="0.85"/><stop offset="1" stop-color="#E7C6BC" stop-opacity="0"/></radialGradient>
+</defs>
+<circle cx="1500" cy="200" r="760" fill="url(#cl-a)"/>
+<circle cx="1180" cy="420" r="420" fill="url(#cl-b)"/>
+<circle cx="1860" cy="1000" r="560" fill="url(#cl-c)"/>
+</svg>
+<p style="font-family:'Josefin Sans', Arial, sans-serif; font-size:24px; font-weight:600; letter-spacing:5px; color:#8BBBDA; width:900px">PUTTING IT INTO PRACTICE</p>
+<h2 style="font-family:'Cormorant Garamond', Georgia, serif; font-size:120px; font-weight:600; line-height:0.95; color:#FAF7F2; width:1000px">Collateral<br>examples</h2>
+</section>
+</div></div>
+<div class="s" data-n="14" data-title="Instagram posts" data-section="Collateral examples and next steps" data-notes="" hidden><div class="scaler"><section class="slide" id="slide-social" data-transition="fade" style="background:#FAF7F2; color:#1B2E4A; font-family:'Nunito Sans', Arial, sans-serif; padding:128px 128px 160px; display:flex; flex-direction:column; gap:36px">
+<h2 style="font-family:'Cormorant Garamond', Georgia, serif; font-size:72px; font-weight:600; line-height:1.05">Instagram posts</h2>
+<div style="display:flex; gap:52px">
+<div style="width:520px; height:520px; background:#1B2E4A; display:flex; flex-direction:column; justify-content:flex-end; gap:18px; padding:44px">
+<svg aria-label="" style="position:absolute; left:0px; top:0px; width:520px; height:520px" width="520" height="520" viewBox="0 0 520 520"><defs><radialGradient id="s1a"><stop offset="0" stop-color="#285A7C"/><stop offset="1" stop-color="#285A7C" stop-opacity="0"/></radialGradient></defs><circle cx="480" cy="40" r="420" fill="url(#s1a)"/></svg>
+<div style="position:absolute; left:40px; top:40px; width:112px; height:112px; border-radius:56px; background:#FAF7F2; display:flex; align-items:center; justify-content:center"><img src="assets/img/cwc-logo-transparent.png" alt="Logo" style="width:96px; height:98px; object-fit:contain"></div>
+<p style="font-family:'Josefin Sans', Arial, sans-serif; font-size:24px; font-weight:600; letter-spacing:4px; color:#8BBBDA">PATIENT STORIES</p>
+<p style="font-family:'Cormorant Garamond', Georgia, serif; font-size:40px; font-weight:600; line-height:1.1; color:#FAF7F2">“Dr. Valdes is a wonderful, kind, compassionate, and professional OBGYN.”</p>
+<p style="font-size:24px; color:#C9D3DC">Monica H. · Google review</p>
+</div>
+<div style="width:520px; height:520px; background:#FAF7F2; display:flex; flex-direction:column; justify-content:flex-end; gap:16px; padding:44px">
+<svg aria-label="" style="position:absolute; left:0px; top:0px; width:520px; height:520px" width="520" height="520" viewBox="0 0 520 520"><defs><radialGradient id="s2a"><stop offset="0" stop-color="#E7C6BC"/><stop offset="1" stop-color="#E7C6BC" stop-opacity="0"/></radialGradient></defs><rect width="520" height="520" fill="#FAF7F2" stroke="#DCD6CC" stroke-width="2"/><circle cx="500" cy="80" r="360" fill="url(#s2a)"/></svg>
+<img src="assets/img/cwc-logo-transparent.png" alt="Logo" style="position:absolute; left:40px; top:40px; width:112px; height:114px; object-fit:contain">
+<p style="font-family:'Josefin Sans', Arial, sans-serif; font-size:24px; font-weight:600; letter-spacing:4px; color:#285A7C">WELLNESS TIP</p>
+<p style="font-family:'Cormorant Garamond', Georgia, serif; font-size:52px; font-weight:600; line-height:1.05">Planning a pregnancy?</p>
+<p style="font-size:24px; line-height:1.45; color:#4A5561">Five steps to prepare your body, from our blog.</p>
+<p style="font-size:24px; font-weight:700; background:#285A7C; color:#FFFFFF; border-radius:30px; padding:12px 28px; width:190px">Read more</p>
+</div>
+<div style="width:520px; height:520px; background:#E8F2F8; display:flex; flex-direction:column; justify-content:flex-end; gap:16px; padding:44px">
+<svg aria-label="" style="position:absolute; left:0px; top:0px; width:520px; height:520px" width="520" height="520" viewBox="0 0 520 520"><defs><radialGradient id="s3a"><stop offset="0" stop-color="#8BBBDA"/><stop offset="1" stop-color="#8BBBDA" stop-opacity="0"/></radialGradient></defs><circle cx="520" cy="60" r="380" fill="url(#s3a)"/></svg>
+<div style="position:absolute; left:40px; top:40px; width:124px; height:124px; border-radius:62px; background:#FAF7F2; display:flex; align-items:center; justify-content:center"><img src="assets/img/cwc-logo-transparent.png" alt="Logo" style="width:104px; height:106px; object-fit:contain"></div>
+<p style="font-family:'Josefin Sans', Arial, sans-serif; font-size:24px; font-weight:600; letter-spacing:4px; color:#285A7C">NOW BOOKING</p>
+<p style="font-family:'Cormorant Garamond', Georgia, serif; font-size:52px; font-weight:600; line-height:1.05">3D/4D ultrasounds</p>
+<p style="font-size:24px; line-height:1.45; color:#4A5561">Meet your baby in beautiful detail.</p>
+<p style="font-size:24px; font-weight:700; background:#285A7C; color:#FFFFFF; border-radius:30px; padding:12px 28px; width:210px">Book online</p>
+</div>
+</div>
+<div style="position:absolute; left:128px; bottom:64px; width:1664px; display:flex; justify-content:space-between"><p style="font-size:24px; color:#4A5561">1080 × 1080 posts: one wash, one eyebrow, one headline, one action.</p><p style="font-size:24px; color:#4A5561">14</p></div>
+</section>
+</div></div>
+<div class="s" data-n="15" data-title="Print: business and appointment cards" data-section="Collateral examples and next steps" data-notes="" hidden><div class="scaler"><section class="slide" id="slide-print" data-transition="fade" style="background:#E8F2F8; color:#1B2E4A; font-family:'Nunito Sans', Arial, sans-serif; padding:128px 128px 160px; display:flex; flex-direction:column; gap:36px">
+<h2 style="font-family:'Cormorant Garamond', Georgia, serif; font-size:72px; font-weight:600; line-height:1.05">Print: business and appointment cards</h2>
+<div style="display:flex; gap:32px">
+<div style="display:flex; flex-direction:column; gap:16px">
+<div style="width:560px; height:320px; background:#FAF7F2; border-radius:12px; display:flex; align-items:center; justify-content:center"><img src="assets/img/cwc-logo-transparent.png" alt="Logo" style="width:230px; height:235px; object-fit:contain"></div>
+<p style="font-size:24px; color:#4A5561">Business card · front</p>
+</div>
+<div style="display:flex; flex-direction:column; gap:16px">
+<div style="width:560px; height:320px; background:#1B2E4A; border-radius:12px; display:flex; flex-direction:column; justify-content:center; gap:8px; padding:40px">
+<p style="font-family:'Cormorant Garamond', Georgia, serif; font-size:40px; font-weight:600; color:#FAF7F2">[Name], MD</p>
+<p style="font-family:'Josefin Sans', Arial, sans-serif; font-size:24px; font-weight:600; letter-spacing:3px; color:#8BBBDA">OBSTETRICS &amp; GYNECOLOGY</p>
+<p style="font-size:24px; line-height:1.4; color:#C9D3DC">305-200-3878<br>3659 South Miami Ave, Suite 6006<br>collaborativewomenscare.com</p>
+</div>
+<p style="font-size:24px; color:#4A5561">Business card · back</p>
+</div>
+<div style="display:flex; flex-direction:column; gap:16px">
+<div style="width:480px; height:320px; background:#FAF7F2; border-radius:12px; display:flex; flex-direction:column; gap:12px; padding:32px; border-top:16px solid #E7C6BC">
+<p style="font-family:'Josefin Sans', Arial, sans-serif; font-size:24px; font-weight:600; letter-spacing:3px; color:#285A7C">YOUR NEXT VISIT</p>
+<p style="font-size:24px; line-height:1.9; color:#1B2E4A">Date ______________<br>Time ______________</p>
+<p style="font-size:24px; line-height:1.35; color:#4A5561">To reschedule: 305-200-3878</p>
+</div>
+<p style="font-size:24px; color:#4A5561">Appointment card</p>
+</div>
+</div>
+<div style="position:absolute; left:128px; bottom:64px; width:1664px; display:flex; justify-content:space-between"><p style="font-size:24px; color:#4A5561">Cards shown at 3.5 × 2 in. Print on uncoated warm-white stock to match Cream.</p><p style="font-size:24px; color:#4A5561">15</p></div>
+</section>
+</div></div>
+<div class="s" data-n="16" data-title="Website and email" data-section="Collateral examples and next steps" data-notes="" hidden><div class="scaler"><section class="slide" id="slide-web" data-transition="fade" style="background:#FAF7F2; color:#1B2E4A; font-family:'Nunito Sans', Arial, sans-serif; padding:128px 128px 160px; display:flex; flex-direction:column; gap:36px">
+<h2 style="font-family:'Cormorant Garamond', Georgia, serif; font-size:72px; font-weight:600; line-height:1.05">Website and email</h2>
+<div style="display:flex; gap:40px">
+<div style="width:1080px; height:600px; background:#FAF7F2; border:2px solid #DCD6CC; border-radius:16px; display:flex; flex-direction:column">
+<div style="height:104px; display:flex; align-items:center; justify-content:space-between; padding:0px 32px; border-bottom:1px solid #DCD6CC; background:#FFFFFF; border-radius:16px 16px 0px 0px">
+<img src="assets/img/cwc-logo-transparent.png" alt="Logo" style="width:84px; height:86px; object-fit:contain">
+<div style="display:flex; gap:32px; align-items:center"><p style="font-size:24px">Services</p><p style="font-size:24px">Providers</p><p style="font-size:24px">Patient forms</p><p style="font-size:24px; font-weight:700; background:#285A7C; color:#FFFFFF; border-radius:28px; padding:10px 26px">Book online</p></div>
+</div>
+<div style="flex:1; display:flex">
+<div style="width:600px; display:flex; flex-direction:column; justify-content:center; gap:18px; padding:48px">
+<p style="font-family:'Josefin Sans', Arial, sans-serif; font-size:24px; font-weight:600; letter-spacing:4px; color:#285A7C">OB-GYN · MIAMI</p>
+<p style="font-family:'Cormorant Garamond', Georgia, serif; font-size:60px; font-weight:600; line-height:1">Personalized women's care. For you. With you.</p>
+<div style="display:flex; gap:16px"><p style="font-size:24px; font-weight:700; background:#285A7C; color:#FFFFFF; border-radius:28px; padding:12px 28px">Book online</p><p style="font-size:24px; font-weight:700; color:#285A7C; border:2px solid #285A7C; border-radius:28px; padding:10px 26px">Call us</p></div>
+</div>
+<div style="flex:1; background:#E8F2F8; border-radius:0px 0px 16px 0px; display:flex; align-items:center; justify-content:center; padding:32px"><p style="font-size:24px; color:#4A5561; width:340px">[Photo: Dr. Valdes with a patient, natural light]</p></div>
+</div>
+</div>
+<div style="flex:1; display:flex; flex-direction:column; gap:16px">
+<div style="background:#FFFFFF; border:1px solid #DCD6CC; border-radius:16px; padding:36px; display:flex; flex-direction:column; gap:14px">
+<p style="font-size:24px; color:#4A5561">Kind regards,</p>
+<div style="display:flex; gap:20px; align-items:center; border-top:2px solid #8BBBDA; padding:20px 0px 0px 0px">
+<img src="assets/img/cwc-logo-transparent.png" alt="Logo" style="width:96px; height:98px; object-fit:contain">
+<div style="display:flex; flex-direction:column; gap:4px"><p style="font-size:26px; font-weight:700">[Name]</p><p style="font-size:24px; color:#4A5561">[Title]</p></div>
+</div>
+<p style="font-size:24px; line-height:1.45; color:#4A5561">Collaborative Women's Care<br>305-200-3878</p>
+<p style="font-size:24px; font-weight:700; color:#285A7C"><u>Book online</u></p>
+</div>
+<p style="font-size:24px; color:#4A5561">Email signature</p>
+</div>
+</div>
+<div style="position:absolute; left:128px; bottom:64px; width:1664px; display:flex; justify-content:space-between"><p style="font-size:24px; color:#4A5561">Collaborative Women's Care · Brand Guide</p><p style="font-size:24px; color:#4A5561">16</p></div>
+</section>
+</div></div>
+<div class="s" data-n="17" data-title="Decisions for the practice" data-section="Collateral examples and next steps" data-notes="" hidden><div class="scaler"><section class="slide" id="slide-next" data-transition="fade" style="background:#1B2E4A; color:#FAF7F2; font-family:'Nunito Sans', Arial, sans-serif; padding:128px 128px 160px; display:flex; flex-direction:column; gap:40px">
+<p style="font-family:'Josefin Sans', Arial, sans-serif; font-size:24px; font-weight:600; letter-spacing:5px; color:#8BBBDA">NEXT STEPS</p>
+<h2 style="font-family:'Cormorant Garamond', Georgia, serif; font-size:72px; font-weight:600; line-height:1.05; color:#FAF7F2">Decisions for the practice</h2>
+<div style="display:flex; gap:64px">
+<ol style="flex:1; font-size:30px; line-height:1.6; color:#FAF7F2">
+<li>Approve the color palette</li>
+<li>Confirm Cormorant Garamond for headlines (option A)</li>
+<li>Request a vector logo (SVG, PDF or AI) from the original designer</li>
+<li>Approve the website updates: cream background, pill buttons</li>
+<li>Plan a short photo session at the office</li>
+</ol>
+<div style="width:560px; display:flex; flex-direction:column; gap:20px; background:#243B5C; border-radius:24px; padding:40px">
+<h3 style="font-size:32px; font-weight:700; color:#FAF7F2">Resources</h3>
+<p style="font-size:24px; line-height:1.5; color:#C9D3DC"><b style="color:#FAF7F2">Logo files:</b> transparent PNG and white JPG</p>
+<p style="font-size:24px; line-height:1.5; color:#C9D3DC"><b style="color:#FAF7F2">Fonts:</b> free at fonts.google.com</p>
+<p style="font-size:24px; line-height:1.5; color:#C9D3DC"><b style="color:#FAF7F2">Design system:</b> live colors, type and rules for web builders</p>
+</div>
+</div>
+<div style="position:absolute; left:128px; bottom:64px; width:1664px; display:flex; justify-content:space-between"><p style="font-size:24px; color:#8FA0B0">Collaborative Women's Care · Brand Guide</p><p style="font-size:24px; color:#8FA0B0">17</p></div>
+</section>
+</div></div>
+  </div>
+  <p class="notes" id="notes" hidden></p>
+</main>
+<div class="grid" id="grid" role="dialog" aria-label="All pages"><div class="grid-inner" id="grid-inner"></div></div>
+<script>
+(function () {
+  var slides = Array.prototype.slice.call(document.querySelectorAll('#deck > .s'));
+  var N = slides.length, i = 0;
+  var stage = document.getElementById('stage'), notes = document.getElementById('notes');
+  var grid = document.getElementById('grid'), gridInner = document.getElementById('grid-inner'), gridBtn = document.getElementById('gridbtn');
+  function pad(n) { return (n < 10 ? '0' : '') + n; }
+  function fit() {
+    var s = slides[i];
+    var nh = notes.hidden ? 0 : notes.offsetHeight + 14;
+    var w = stage.clientWidth - 40, h = stage.clientHeight - 40 - nh;
+    var k = Math.max(0.1, Math.min(w / 1920, h / 1080));
+    s.style.width = (1920 * k) + 'px'; s.style.height = (1080 * k) + 'px';
+    s.firstElementChild.style.transform = 'scale(' + k + ')';
+  }
+  function show(n) {
+    i = Math.max(0, Math.min(N - 1, n));
+    slides.forEach(function (s, j) { s.hidden = j !== i; });
+    var s = slides[i];
+    document.getElementById('counter').textContent = pad(i + 1) + ' / ' + pad(N);
+    document.getElementById('section').textContent = s.dataset.section;
+    document.getElementById('prev').disabled = i === 0;
+    document.getElementById('next').disabled = i === N - 1;
+    if (s.dataset.notes) { notes.innerHTML = '<b>Note:</b> '; notes.appendChild(document.createTextNode(s.dataset.notes)); notes.hidden = false; }
+    else { notes.hidden = true; }
+    try { history.replaceState(null, '', '#' + (i + 1)); } catch (e) {}
+    fit();
+  }
+  function buildGrid() {
+    if (gridInner.childNodes.length) return;
+    slides.forEach(function (s, j) {
+      var b = document.createElement('button'); b.type = 'button'; b.className = 'thumb';
+      b.setAttribute('aria-label', 'Page ' + (j + 1) + ': ' + s.dataset.title);
+      var tv = document.createElement('div'); tv.className = 'tv';
+      var sc = s.firstElementChild.cloneNode(true); sc.removeAttribute('style');
+      Array.prototype.forEach.call(sc.querySelectorAll('[id]'), function (el) { if (el.tagName.toLowerCase() === 'section') el.removeAttribute('id'); });
+      tv.appendChild(sc); b.appendChild(tv);
+      var cap = document.createElement('span'); cap.innerHTML = '<b>' + pad(j + 1) + '</b>'; cap.appendChild(document.createTextNode(s.dataset.title)); b.appendChild(cap);
+      b.addEventListener('click', function () { toggleGrid(false); show(j); });
+      gridInner.appendChild(b);
+    });
+  }
+  function sizeThumbs() {
+    Array.prototype.forEach.call(gridInner.querySelectorAll('.tv'), function (tv) {
+      tv.firstElementChild.style.transform = 'scale(' + (tv.clientWidth / 1920) + ')';
+    });
+  }
+  function toggleGrid(open) {
+    if (open) { buildGrid(); }
+    grid.classList.toggle('open', open);
+    gridBtn.setAttribute('aria-pressed', open ? 'true' : 'false');
+    if (open) {
+      sizeThumbs();
+      Array.prototype.forEach.call(gridInner.children, function (b, j) { b.setAttribute('aria-current', j === i ? 'true' : 'false'); });
+      gridInner.children[i].focus();
+    }
+  }
+  document.getElementById('prev').addEventListener('click', function () { show(i - 1); });
+  document.getElementById('next').addEventListener('click', function () { show(i + 1); });
+  gridBtn.addEventListener('click', function () { toggleGrid(!grid.classList.contains('open')); });
+  document.addEventListener('keydown', function (e) {
+    if (e.target && /input|textarea/i.test(e.target.tagName)) return;
+    var open = grid.classList.contains('open');
+    if (e.key === 'ArrowRight' || e.key === 'PageDown' || (e.key === ' ' && !open)) { e.preventDefault(); if (!open) show(i + 1); }
+    else if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); if (!open) show(i - 1); }
+    else if (e.key === 'Home') { show(0); }
+    else if (e.key === 'End') { show(N - 1); }
+    else if (e.key === 'g' || e.key === 'G') { toggleGrid(!open); }
+    else if (e.key === 'Escape' && open) { toggleGrid(false); }
+  });
+  var sx = null;
+  stage.addEventListener('touchstart', function (e) { sx = e.touches[0].clientX; }, { passive: true });
+  stage.addEventListener('touchend', function (e) {
+    if (sx === null) return; var dx = e.changedTouches[0].clientX - sx; sx = null;
+    if (Math.abs(dx) > 50) show(i + (dx < 0 ? 1 : -1));
+  });
+  window.addEventListener('resize', function () { fit(); if (grid.classList.contains('open')) sizeThumbs(); });
+  var start = parseInt((location.hash || '').replace('#', ''), 10);
+  show(isNaN(start) ? 0 : start - 1);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+})();
+</script>
+</body>
+</html>

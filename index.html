@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Collaborative Women's Care · Brand &amp; Website Proposal</title>
+<link rel="icon" type="image/png" href="assets/img/cwc-logo-transparent.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Josefin+Sans:wght@600&family=Nunito+Sans:wght@400;700&display=swap">
+<link rel="stylesheet" href="assets/css/site.css">
+<style>
+  /* ---------- gate ---------- */
+  .gate { min-height: 100vh; display: grid; place-items: center; padding: 32px 16px; position: relative; overflow: hidden; }
+  .gate::before, .gate::after { content: ""; position: absolute; border-radius: 50%; pointer-events: none; }
+  .gate::before { width: 720px; height: 720px; right: -260px; top: -260px; background: var(--pale); }
+  .gate::after { width: 420px; height: 420px; left: -160px; bottom: -180px; border: 1px solid var(--sky); }
+  .gate-card { position: relative; width: 100%; max-width: 440px; background: var(--white); border-radius: var(--radius-lg); box-shadow: var(--shadow); padding: 44px 36px 36px; text-align: center; display: flex; flex-direction: column; gap: 18px; align-items: center; }
+  .gate-card img { width: 132px; height: auto; }
+  .gate-card h1 { font-family: var(--font-display); font-weight: 500; font-size: 38px; line-height: 1.05; margin: 0; }
+  .gate-card p { margin: 0; color: var(--slate); }
+  .gate form { width: 100%; display: flex; flex-direction: column; gap: 12px; text-align: left; margin-top: 6px; }
+  .gate label { font-weight: 700; font-size: 14px; }
+  .gate input { width: 100%; min-height: 52px; border: 2px solid var(--line-strong); border-radius: 12px; padding: 0 16px; font: 17px var(--font-sans); color: var(--navy); background: var(--cream); }
+  .gate input:focus { outline: 2px solid var(--blue); outline-offset: 2px; border-color: var(--blue); }
+  .gate .btn { width: 100%; }
+  .gate .err { color: #9A2B20; font-size: 14px; min-height: 20px; margin: 0; }
+  .gate small { color: var(--slate); font-size: 13px; }
+
+  body.locked .welcome { display: none; }
+  body:not(.locked) .gate { display: none; }
+
+  /* ---------- welcome ---------- */
+  .wrap { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+  .top { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 18px 0; border-bottom: 1px solid var(--line); }
+  .top .brand { display: flex; align-items: center; gap: 14px; text-decoration: none; color: var(--navy); }
+  .top .brand img { width: 56px; height: auto; }
+  .top .brand span { font-family: var(--font-display); font-size: 22px; font-weight: 600; line-height: 1.1; }
+  .top .brand em { display: block; font-style: normal; font-family: var(--font-sans); font-size: 13px; color: var(--slate); font-weight: 400; }
+  .linkbtn { background: none; border: 1px solid var(--line); border-radius: 999px; min-height: 40px; padding: 0 16px; font: 700 14px var(--font-sans); color: var(--navy); cursor: pointer; }
+  .linkbtn:hover { background: var(--white); }
+
+  .hero { position: relative; padding: 88px 0 72px; overflow: hidden; }
+  .hero .ring { position: absolute; border-radius: 50%; border: 1px solid var(--sky); pointer-events: none; }
+  .hero .ring.a { width: 520px; height: 520px; right: -120px; top: -160px; }
+  .hero .ring.b { width: 320px; height: 320px; right: 40px; top: -40px; }
+  .hero .disc { position: absolute; width: 360px; height: 360px; right: 60px; top: 70px; border-radius: 50%; background: var(--pale); display: grid; place-items: center; }
+  .hero .disc img { width: 250px; }
+  .hero .copy { position: relative; max-width: 660px; display: flex; flex-direction: column; gap: 24px; }
+  .hero h1 { font-family: var(--font-display); font-weight: 500; font-size: clamp(46px, 6.4vw, 84px); line-height: .98; margin: 0; letter-spacing: -.5px; }
+  .hero h1 i { color: var(--blue); }
+  .hero p { margin: 0; font-size: 19px; line-height: 1.65; color: var(--slate); max-width: 560px; }
+  .hero .actions { display: flex; gap: 12px; flex-wrap: wrap; }
+
+  section.block { padding: 72px 0; }
+  .block-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; margin-bottom: 36px; flex-wrap: wrap; }
+  .block-head h2 { font-family: var(--font-display); font-weight: 500; font-size: clamp(36px, 4.4vw, 54px); line-height: 1; margin: 10px 0 0; }
+  .block-head p { margin: 0; max-width: 400px; color: var(--slate); }
+
+  .cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+  .card { position: relative; background: var(--white); border: 1px solid var(--line); border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; text-decoration: none; color: var(--navy); transition: transform .2s ease, box-shadow .2s ease; }
+  .card:hover { transform: translateY(-3px); box-shadow: var(--shadow); color: var(--navy); }
+  .card .art { height: 220px; position: relative; overflow: hidden; }
+  .card .body { padding: 26px 26px 28px; display: flex; flex-direction: column; gap: 10px; flex-grow: 1; }
+  .card .num { font-family: var(--font-display); font-size: 20px; color: var(--blue); }
+  .card h3 { margin: 0; font-family: var(--font-display); font-size: 32px; font-weight: 600; line-height: 1.05; }
+  .card p { margin: 0; color: var(--slate); font-size: 15px; line-height: 1.6; flex-grow: 1; }
+  .card .meta { display: flex; gap: 8px; flex-wrap: wrap; }
+  .chip { font-size: 12px; font-weight: 700; padding: 5px 10px; border-radius: 999px; background: var(--pale); color: var(--navy); }
+  .card .go { font-weight: 700; color: var(--blue); font-size: 15px; padding-top: 6px; }
+  .badge { position: absolute; top: 16px; left: 16px; z-index: 2; background: var(--navy); color: #fff; font: 700 12px var(--font-sans); letter-spacing: .04em; padding: 6px 12px; border-radius: 999px; }
+
+  /* card art: brand guide */
+  .art.guide { background: var(--navy); display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 8px; padding: 22px; }
+  .art.guide i { border-radius: 14px; display: block; }
+  .art.guide .t { grid-row: span 2; background: var(--cream); display: grid; place-items: center; }
+  .art.guide .t img { width: 64%; }
+  /* card art: homepage mini wireframes */
+  .art.home { background: var(--pale); padding: 22px 22px 0; }
+  .mini { background: var(--cream); border-radius: 12px 12px 0 0; height: 100%; padding: 14px; display: flex; flex-direction: column; gap: 9px; box-shadow: var(--shadow); }
+  .mini .bar { display: flex; justify-content: space-between; align-items: center; }
+  .mini .dot { width: 22px; height: 22px; border-radius: 50%; border: 2px solid var(--sky); }
+  .mini .pill { width: 44px; height: 12px; border-radius: 99px; background: var(--blue); }
+  .mini .h { height: 14px; border-radius: 4px; background: var(--navy); }
+  .mini .h.s { width: 55%; }
+  .mini .l { height: 7px; border-radius: 4px; background: var(--line); }
+  .mini .row { display: grid; gap: 6px; }
+  .mini .row i { display: block; height: 34px; border-radius: 8px; }
+  .mini.v2 .split { display: flex; gap: 10px; }
+  .mini.v2 .arch { width: 70px; height: 86px; border-radius: 35px 35px 8px 8px; background: var(--pale); flex-shrink: 0; }
+  .mini.v2 .stack { flex-grow: 1; display: flex; flex-direction: column; gap: 7px; justify-content: center; }
+
+  .steps { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; border-top: 1px solid var(--navy); }
+  .step { padding: 24px 24px 0 0; display: flex; flex-direction: column; gap: 8px; }
+  .step b { font-family: var(--font-display); font-size: 30px; font-weight: 500; color: var(--blue); line-height: 1; }
+  .step h3 { margin: 0; font-size: 18px; }
+  .step p { margin: 0; color: var(--slate); font-size: 15px; }
+
+  .glance { display: grid; grid-template-columns: 1.3fr 1fr; gap: 24px; }
+  .panel { background: var(--white); border-radius: var(--radius-lg); padding: 32px; }
+  .swatches { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; margin-top: 18px; }
+  .sw { border-radius: 14px; height: 96px; padding: 12px; display: flex; flex-direction: column; justify-content: flex-end; font-size: 12px; font-weight: 700; line-height: 1.3; }
+  .sw span { font-weight: 400; opacity: .9; }
+  .fonts { display: flex; flex-direction: column; gap: 16px; margin-top: 18px; }
+  .font-row { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; border-bottom: 1px solid var(--line); padding-bottom: 12px; }
+  .font-row:last-child { border-bottom: 0; }
+  .font-row small { color: var(--slate); font-size: 13px; text-align: right; }
+
+  .asks { background: var(--navy); color: var(--on-navy); border-radius: var(--radius-lg); padding: 48px; display: grid; grid-template-columns: 1fr 1.4fr; gap: 48px; }
+  .asks h2 { color: #fff; font-family: var(--font-display); font-weight: 500; font-size: clamp(34px, 4vw, 50px); line-height: 1; margin: 10px 0 14px; }
+  .asks .eyebrow { color: var(--sky); }
+  .asks ol { margin: 0; padding: 0; list-style: none; counter-reset: a; display: flex; flex-direction: column; }
+  .asks li { counter-increment: a; display: grid; grid-template-columns: 40px 1fr; gap: 8px; padding: 14px 0; border-bottom: 1px solid var(--navy-card); }
+  .asks li::before { content: counter(a, decimal-leading-zero); font-family: var(--font-display); font-size: 20px; color: var(--sky); }
+  .asks li b { color: #fff; }
+
+  .downloads { display: flex; gap: 16px; flex-wrap: wrap; }
+  .dl { display: flex; align-items: center; gap: 16px; background: var(--white); border: 1px solid var(--line); border-radius: 16px; padding: 14px 20px 14px 14px; text-decoration: none; color: var(--navy); min-width: 280px; }
+  .dl:hover { box-shadow: var(--shadow); color: var(--navy); }
+  .dl .thumb { width: 64px; height: 64px; border-radius: 12px; display: grid; place-items: center; background: var(--pale); }
+  .dl .thumb.white { background: #fff; border: 1px solid var(--line); }
+  .dl .thumb img { width: 52px; }
+  .dl strong { display: block; }
+  .dl span { font-size: 13px; color: var(--slate); }
+
+  footer.foot { margin-top: 72px; padding: 28px 0 40px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; color: var(--slate); font-size: 14px; }
+
+  @media (max-width: 980px) {
+    .cards { grid-template-columns: 1fr; }
+    .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 20px; }
+    .glance, .asks { grid-template-columns: 1fr; }
+    .hero .disc, .hero .ring { display: none; }
+    .hero { padding: 56px 0 40px; }
+  }
+  @media (max-width: 560px) {
+    .steps { grid-template-columns: 1fr; }
+    .swatches { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .asks { padding: 32px 22px; }
+    section.block { padding: 48px 0; }
+    .dl { min-width: 0; width: 100%; }
+    .top .brand em { display: none; }
+  }
+</style>
+</head>
+<body class="locked">
+
+<main class="gate" id="gate" aria-labelledby="gate-title">
+  <div class="gate-card">
+    <img src="assets/img/cwc-logo-transparent.png" alt="Collaborative Women's Care">
+    <div class="eyebrow">Private review</div>
+    <h1 id="gate-title">Brand &amp; website proposal</h1>
+    <p>Enter the access phrase you were given to continue.</p>
+    <form id="gate-form" autocomplete="off">
+      <label for="phrase">Access phrase</label>
+      <input id="phrase" name="phrase" type="password" autocapitalize="none" spellcheck="false" required aria-describedby="gate-err">
+      <p class="err" id="gate-err" role="alert"></p>
+      <button class="btn" type="submit">Enter</button>
+    </form>
+    <small>Prepared for the Collaborative Women's Care team</small>
+  </div>
+</main>
+
+<div class="welcome">
+  <div class="wrap">
+    <header class="top">
+      <a class="brand" href="index.html">
+        <img src="assets/img/cwc-logo-transparent.png" alt="">
+        <span>Collaborative Women's Care<em>Brand &amp; website proposal · September 2026</em></span>
+      </a>
+      <button class="linkbtn" type="button" id="lock">Lock</button>
+    </header>
+
+    <section class="hero">
+      <div class="ring a" aria-hidden="true"></div>
+      <div class="ring b" aria-hidden="true"></div>
+      <div class="disc" aria-hidden="true"><img src="assets/img/cwc-logo-transparent.png" alt=""></div>
+      <div class="copy">
+        <div class="eyebrow">Welcome</div>
+        <h1>A clearer, warmer brand, <i>built around your seal.</i></h1>
+        <p>Your logo stays exactly as it is. Everything around it (colors, fonts, the website) has been brought into one calm, consistent system. This page walks you through what's here and what we need from you.</p>
+        <div class="actions">
+          <a class="btn" href="brand-guide.html">Start with the brand guide</a>
+          <a class="btn ghost" href="homepage-v2.html">See the new homepage</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" aria-labelledby="inside">
+      <div class="block-head">
+        <div><div class="eyebrow">What's inside</div><h2 id="inside">Three things to review</h2></div>
+        <p>About 15 minutes. Everything opens in your browser; nothing to install.</p>
+      </div>
+      <div class="cards">
+        <a class="card" href="brand-guide.html">
+          <div class="art guide" aria-hidden="true">
+            <i class="t"><img src="assets/img/cwc-logo-transparent.png" alt=""></i>
+            <i style="background:#8BBBDA"></i><i style="background:#285A7C"></i>
+            <i style="background:#E7C6BC"></i><i style="background:#E8F2F8"></i>
+          </div>
+          <div class="body">
+            <span class="num">01</span>
+            <h3>Brand guide</h3>
+            <p>The logo rules, the eight-color palette, the fonts, website building blocks, and examples on social posts, cards and email.</p>
+            <div class="meta"><span class="chip">17 pages</span><span class="chip">Use ← → keys</span></div>
+            <span class="go">Open the guide →</span>
+          </div>
+        </a>
+        <a class="card" href="homepage-v2.html">
+          <span class="badge">Recommended</span>
+          <div class="art home" aria-hidden="true">
+            <div class="mini v2">
+              <div class="bar"><i class="dot"></i><i class="pill"></i></div>
+              <div class="split"><div class="stack"><i class="h"></i><i class="h s"></i><i class="l"></i><i class="l" style="width:70%"></i></div><i class="arch"></i></div>
+              <div class="row" style="grid-template-columns:repeat(5,1fr)"><i style="background:#1B2E4A"></i><i style="background:#FAF7F2;border:1px solid #DCD6CC"></i><i style="background:#FAF7F2;border:1px solid #DCD6CC"></i><i style="background:#FAF7F2;border:1px solid #DCD6CC"></i><i style="background:#FAF7F2;border:1px solid #DCD6CC"></i></div>
+            </div>
+          </div>
+          <div class="body">
+            <span class="num">02</span>
+            <h3>Homepage · Version 2</h3>
+            <p>Simpler and more premium. Patients choose where they are in their journey instead of scanning 16 services. Clickable, with a language switcher and both doctors.</p>
+            <div class="meta"><span class="chip">Desktop + mobile</span><span class="chip">Interactive</span></div>
+            <span class="go">Try it →</span>
+          </div>
+        </a>
+        <a class="card" href="homepage-v1.html">
+          <div class="art home" aria-hidden="true" style="background:#EFEAE2">
+            <div class="mini">
+              <div class="bar"><i class="dot"></i><i class="pill"></i></div>
+              <i class="h"></i><i class="l"></i>
+              <div class="row" style="grid-template-columns:repeat(4,1fr)"><i style="background:#E8F2F8"></i><i style="background:#E8F2F8"></i><i style="background:#E8F2F8"></i><i style="background:#E8F2F8"></i></div>
+              <div class="row" style="grid-template-columns:repeat(4,1fr)"><i style="background:#E8F2F8"></i><i style="background:#E8F2F8"></i><i style="background:#E8F2F8"></i><i style="background:#E8F2F8"></i></div>
+            </div>
+          </div>
+          <div class="body">
+            <span class="num">03</span>
+            <h3>Homepage · Version 1</h3>
+            <p>The first pass: today's site, reorganized in the new brand. Useful for comparison; it keeps the full service grid.</p>
+            <div class="meta"><span class="chip">Desktop + mobile</span><span class="chip">For comparison</span></div>
+            <span class="go">Compare →</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section class="block" aria-labelledby="how" style="padding-top:24px">
+      <div class="block-head"><div><div class="eyebrow">How to review</div><h2 id="how">Four easy steps</h2></div></div>
+      <div class="steps">
+        <div class="step"><b>01</b><h3>Read the guide</h3><p>Page through with the arrows. The last page lists the decisions we need.</p></div>
+        <div class="step"><b>02</b><h3>Open Version 2</h3><p>Click the journey tabs, switch languages (EN · ES · RU · FR) and flip through reviews.</p></div>
+        <div class="step"><b>03</b><h3>Check it on your phone</h3><p>Every homepage has a Desktop / Mobile switch at the top.</p></div>
+        <div class="step"><b>04</b><h3>Send your notes</h3><p>Reply with what you'd keep, change or remove. Screenshots are welcome.</p></div>
+      </div>
+    </section>
+
+    <section class="block" aria-labelledby="glance" style="padding-top:24px">
+      <div class="block-head"><div><div class="eyebrow">At a glance</div><h2 id="glance">The system in one view</h2></div></div>
+      <div class="glance">
+        <div class="panel">
+          <strong>Eight colors</strong>
+          <div class="swatches">
+            <div class="sw" style="background:#1B2E4A;color:#fff">Navy<span>#1B2E4A</span></div>
+            <div class="sw" style="background:#8BBBDA;color:#1B2E4A">Sky<span>#8BBBDA · from the logo</span></div>
+            <div class="sw" style="background:#285A7C;color:#fff">Blue<span>#285A7C</span></div>
+            <div class="sw" style="background:#E7C6BC;color:#1B2E4A">Blush<span>#E7C6BC</span></div>
+            <div class="sw" style="background:#FAF7F2;color:#1B2E4A;border:1px solid #DCD6CC">Cream<span>#FAF7F2</span></div>
+            <div class="sw" style="background:#FFFFFF;color:#1B2E4A;border:1px solid #DCD6CC">White<span>#FFFFFF</span></div>
+            <div class="sw" style="background:#E8F2F8;color:#1B2E4A">Pale Blue<span>#E8F2F8</span></div>
+            <div class="sw" style="background:#4A5561;color:#fff">Slate<span>#4A5561</span></div>
+          </div>
+        </div>
+        <div class="panel">
+          <strong>Three fonts, one job each</strong>
+          <div class="fonts">
+            <div class="font-row"><span style="font-family:var(--font-display);font-size:34px;font-weight:600;line-height:1">For you. With you.</span><small>Cormorant Garamond<br>Headlines</small></div>
+            <div class="font-row"><span style="font-size:18px">Personal care, clearly explained.</span><small>Nunito Sans<br>Body &amp; buttons</small></div>
+            <div class="font-row"><span class="eyebrow" style="font-size:14px">What we offer</span><small>Josefin Sans<br>Small labels</small></div>
+          </div>
+          <p style="margin:14px 0 0;color:var(--slate);font-size:14px">All free on Google Fonts.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" aria-labelledby="asks" style="padding-top:24px">
+      <div class="asks">
+        <div>
+          <div class="eyebrow">What we need from you</div>
+          <h2 id="asks">A few decisions and a few files</h2>
+          <p style="margin:0">Nothing here is final until you say so. These answers let us finish the design and start building.</p>
+        </div>
+        <ol>
+          <li><span><b>Approve the palette and fonts</b>, or tell us what to change.</span></li>
+          <li><span><b>Pick a homepage direction.</b> We recommend Version 2.</span></li>
+          <li><span><b>Dr. Bertha Campo:</b> a portrait, a short bio, and her title exactly as it should appear.</span></li>
+          <li><span><b>Photos</b> of Dr. Valdes, the team and the office, or a date for a short photo session.</span></li>
+          <li><span><b>A vector logo</b> (SVG, PDF or AI) from the original designer, for print and signage.</span></li>
+          <li><span><b>Translation reviewers</b> for Spanish, Russian and French: native speakers on the team, or a service.</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="block" aria-labelledby="files" style="padding-top:24px">
+      <div class="block-head"><div><div class="eyebrow">Downloads</div><h2 id="files">Logo files</h2></div><p>The seal, unchanged. Use the transparent version on light backgrounds.</p></div>
+      <div class="downloads">
+        <a class="dl" href="assets/img/cwc-logo-transparent.png" download><span class="thumb"><img src="assets/img/cwc-logo-transparent.png" alt=""></span><span><strong>Transparent PNG</strong><span>481 × 490 · for web and slides</span></span></a>
+        <a class="dl" href="assets/img/cwc-logo.jpg" download><span class="thumb white"><img src="assets/img/cwc-logo.jpg" alt=""></span><span><strong>White-background JPG</strong><span>481 × 490 · email, documents</span></span></a>
+      </div>
+    </section>
+
+    <footer class="foot">
+      <span>Confidential draft for Collaborative Women's Care · September 2026</span>
+      <span>Photos and some details are placeholders, marked in [brackets].</span>
+    </footer>
+  </div>
+</div>
+
+<script src="assets/js/gate.js"></script>
+<script>
+(function () {
+  var body = document.body, form = document.getElementById('gate-form'), input = document.getElementById('phrase'), err = document.getElementById('gate-err');
+  function nextTarget() {
+    var m = /[#&]next=([^&]+)/.exec(location.hash);
+    if (!m) return null;
+    var t = decodeURIComponent(m[1]);
+    return /^[a-z0-9-]+\.html(#[\w-]*)?$/i.test(t) ? t : null;
+  }
+  function open() {
+    var t = nextTarget();
+    if (t) { location.replace(t); return; }
+    body.classList.remove('locked');
+    window.scrollTo(0, 0);
+  }
+  if (CWCGate.unlocked()) open(); else input.focus();
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (CWCGate.check(input.value)) { err.textContent = ''; open(); }
+    else { err.textContent = 'That phrase doesn’t match. Please try again.'; input.select(); }
+  });
+  document.getElementById('lock').addEventListener('click', function () {
+    CWCGate.lock(); input.value = ''; body.classList.add('locked'); input.focus();
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Homepage · Version 1 · Collaborative Women&#x27;s Care</title>
+<link rel="icon" type="image/png" href="assets/img/cwc-logo-transparent.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Josefin+Sans:wght@600&family=Lora:wght@600&family=Nunito+Sans:wght@400;700&display=swap">
+<link rel="stylesheet" href="assets/css/site.css">
+<script src="assets/js/gate.js"></script>
+<script>CWCGate.guard();</script>
+<style>
+
+body { background: #EFEAE2; }
+.view { padding: 28px 20px 64px; }
+.dwrap { margin: 0 auto; position: relative; }
+.dwrap .dscale { width: 1440px; transform-origin: 0 0; position: absolute; left: 0; top: 0; }
+.dshadow { box-shadow: 0 2px 6px rgba(27,46,74,.08), 0 18px 48px rgba(27,46,74,.14); border-radius: 10px; overflow: hidden; }
+.phone { margin: 0 auto; width: 414px; border-radius: 52px; background: #1B2E4A; padding: 12px; box-shadow: 0 18px 48px rgba(27,46,74,.22); position: relative; }
+.phone::before { content: ""; position: absolute; top: 20px; left: 50%; width: 96px; height: 22px; margin-left: -48px; border-radius: 12px; background: #14243B; z-index: 3; }
+.phone .screen { width: 390px; height: min(844px, calc(100vh - 160px)); min-height: 520px; overflow-y: auto; overflow-x: hidden; border-radius: 40px; background: #FAF7F2; padding-top: 34px; }
+.phone .screen::-webkit-scrollbar { width: 0; }
+.caption { text-align: center; color: var(--slate); font-size: 14px; margin: 14px 0 0; }
+.pv [hidden] { display: none !important; }
+.badge2 { background: var(--sky); color: var(--navy); font: 700 12px var(--font-sans); padding: 4px 10px; border-radius: 999px; }
+.mock button { font-family: inherit; cursor: pointer; }
+@media (max-width: 460px) { .phone { width: 100%; border-radius: 0; padding: 0; background: none; box-shadow: none; } .phone::before { display: none; } .phone .screen { width: 100%; border-radius: 0; height: auto; padding-top: 0; overflow: visible; } .view { padding: 0 0 40px; } }
+
+/* from the artboard */
+
+
+.mock a{color:#285A7C}.mock a:hover{color:#1F4863}
+
+</style>
+</head>
+<body>
+<header class="reviewbar">
+  <div class="left">
+    <a class="back" href="index.html">← Overview</a>
+    <span class="title">Homepage · Version 1</span>
+  </div>
+  <div class="right">
+    <span class="tip">The first pass, <b>for comparison</b></span>
+    <div class="seg" role="group" aria-label="View">
+      <button type="button" id="b-desk" aria-pressed="true">Desktop</button>
+      <button type="button" id="b-mob" aria-pressed="false">Mobile</button>
+    </div>
+    <div class="seg"><a href="homepage-v2.html">See Version 2</a></div>
+  </div>
+</header>
+<main class="pv">
+  <section class="view" id="v-desk" aria-label="Desktop view">
+    <div class="dwrap" id="dwrap"><div class="dscale dshadow mock" id="dbox"></div></div>
+    <p class="caption">Version 1: the first pass, kept for comparison. Photos are placeholders.</p>
+  </section>
+  <section class="view" id="v-mob" aria-label="Mobile view" hidden>
+    <div class="phone"><div class="screen mock" id="mbox"></div></div>
+    <p class="caption">Scroll inside the phone.</p>
+  </section>
+</main>
+<template id="t-desk">
+<div style="width: 1440px; height: 4460px; box-sizing: border-box; background: #FAF7F2; font-family: 'Nunito Sans', 'Helvetica Neue', Arial, sans-serif; color: #1B2E4A; display: flex; flex-direction: column">
+
+<div style="height: 44px; background: #1B2E4A; color: #C9D3DC; display: flex; align-items: center; justify-content: space-between; padding: 0 80px; font-size: 14px">
+<div>Mon–Thu 9:00 am–5:00 pm · Fri 9:00 am–3:30 pm</div>
+<div style="display: flex; gap: 28px; align-items: center">
+<a href="tel:3052003878" style="color: #FAF7F2; text-decoration: none; font-weight: 700">305-200-3878</a>
+<span>3659 South Miami Ave, Suite 6006</span>
+<a href="https://21219.portal.athenahealth.com/" style="color: #8BBBDA">Patient portal</a>
+</div>
+</div>
+
+<header style="height: 112px; background: #FFFFFF; border-bottom: 1px solid #DCD6CC; display: flex; align-items: center; justify-content: space-between; padding: 0 80px">
+<a href="#top" aria-label="Collaborative Women's Care home" style="display: flex; align-items: center"><img src="assets/img/cwc-logo-transparent.png" alt="Collaborative Women's Care" style="width: 92px; height: 94px; object-fit: contain"></a>
+<nav style="display: flex; gap: 36px; align-items: center; font-size: 16px; font-weight: 700">
+<a href="#services" style="color: #1B2E4A; text-decoration: none">Services</a>
+<a href="#team" style="color: #1B2E4A; text-decoration: none">Providers</a>
+<a href="#forms" style="color: #1B2E4A; text-decoration: none">Patient forms</a>
+<a href="#insurance" style="color: #1B2E4A; text-decoration: none">Insurance</a>
+<a href="#blog" style="color: #1B2E4A; text-decoration: none">Blog</a>
+<a href="#visit" style="color: #1B2E4A; text-decoration: none">Contact</a>
+<a href="#book" style="background: #285A7C; color: #FFFFFF; text-decoration: none; border-radius: 999px; padding: 14px 28px; font-size: 15px">Book online</a>
+</nav>
+</header>
+
+<section style="position: relative; height: 720px; display: flex; align-items: center; gap: 64px; padding: 0 80px; overflow: hidden">
+<div style="position: absolute; right: -160px; top: -200px; width: 760px; height: 760px; border-radius: 50%; background: #E8F2F8"></div>
+<div style="position: absolute; right: 420px; bottom: -260px; width: 420px; height: 420px; border-radius: 50%; background: #E7C6BC"></div>
+<div style="position: relative; width: 640px; display: flex; flex-direction: column; gap: 24px">
+<div style="font-family: 'Josefin Sans', Arial, sans-serif; font-size: 14px; font-weight: 600; letter-spacing: 0.18em; color: #285A7C">OB-GYN · MIAMI, FLORIDA</div>
+<h1 style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 76px; line-height: 1; font-weight: 600; color: #1B2E4A">Personalized women's care. For you. With you.</h1>
+<p style="margin: 0; font-size: 20px; line-height: 32px; color: #4A5561">We partner with girls and women from age 12 through menopause and beyond, from well-woman exams and pregnancy to 3D/4D ultrasound and hormone therapy, in a warm and caring environment.</p>
+<div style="display: flex; gap: 16px; align-items: center">
+<a href="#book" style="background: #285A7C; color: #FFFFFF; text-decoration: none; border-radius: 999px; padding: 17px 34px; font-size: 16px; font-weight: 700">Book online</a>
+<a href="tel:3052003878" style="border: 2px solid #285A7C; color: #285A7C; text-decoration: none; border-radius: 999px; padding: 15px 32px; font-size: 16px; font-weight: 700">Call 305-200-3878</a>
+</div>
+<div style="display: flex; gap: 12px; align-items: center; font-size: 16px; color: #4A5561">
+<span style="color: #285A7C; font-size: 20px; letter-spacing: 2px" aria-hidden="true">★★★★★</span>
+<span><b style="color: #1B2E4A">4.94 out of 5</b> from 481 patient reviews</span>
+</div>
+</div>
+<div style="position: relative; flex-grow: 1; height: 560px; display: flex; justify-content: flex-end">
+<div style="width: 560px; height: 560px; border-radius: 24px; background: #FFFFFF; border: 1px solid #DCD6CC; display: flex; align-items: center; justify-content: center; color: #4A5561; font-size: 16px; text-align: center; padding: 40px; box-sizing: border-box">[Photo: Dr. Valdes with a patient, warm natural light]</div>
+<div style="position: absolute; left: 0; bottom: 36px; width: 320px; background: #FFFFFF; border-radius: 16px; padding: 24px; box-shadow: 0 1px 2px rgba(27,46,74,0.06), 0 8px 24px rgba(27,46,74,0.08); display: flex; flex-direction: column; gap: 10px">
+<div style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 24px; line-height: 1.15; font-weight: 600">“Absolutely the best doctor and staff!”</div>
+<div style="font-size: 14px; color: #4A5561">Danaisy A. · Google review</div>
+</div>
+</div>
+</section>
+
+<section id="services" style="background: #E8F2F8; padding: 96px 80px; display: flex; flex-direction: column; gap: 48px">
+<div style="display: flex; justify-content: space-between; align-items: flex-end">
+<div style="display: flex; flex-direction: column; gap: 14px">
+<div style="font-family: 'Josefin Sans', Arial, sans-serif; font-size: 14px; font-weight: 600; letter-spacing: 0.18em; color: #285A7C">WHAT WE OFFER</div>
+<h2 style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 52px; line-height: 1.05; font-weight: 600">Care for every stage of life</h2>
+</div>
+<a href="#all-services" style="font-size: 16px; font-weight: 700">View all services →</a>
+</div>
+<div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px">
+<sc-for list="{{services}}" as="s" hint-placeholder-count="8">
+<a href="#service" style="background: #FFFFFF; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 14px; text-decoration: none; color: #1B2E4A; min-height: 250px; box-sizing: border-box">
+<div style="width: 56px; height: 56px; border-radius: 50%; background: #E8F2F8; display: flex; align-items: center; justify-content: center">
+<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#285A7C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="{{s.icon}}"></path></svg>
+</div>
+<div style="font-size: 20px; line-height: 28px; font-weight: 700">{{s.title}}</div>
+<div style="font-size: 16px; line-height: 25px; color: #4A5561; flex-grow: 1">{{s.text}}</div>
+<div style="font-size: 15px; font-weight: 700; color: #285A7C">Learn more →</div>
+</a>
+</sc-for>
+</div>
+</section>
+
+<section id="team" style="padding: 112px 80px; display: flex; gap: 80px; align-items: center">
+<div style="width: 520px; height: 600px; border-radius: 24px; background: #E7C6BC; display: flex; align-items: center; justify-content: center; color: #4A5561; font-size: 16px; text-align: center; padding: 40px; box-sizing: border-box">[Portrait: Eduardo Valdes, MD]</div>
+<div style="flex-grow: 1; display: flex; flex-direction: column; gap: 22px">
+<div style="font-family: 'Josefin Sans', Arial, sans-serif; font-size: 14px; font-weight: 600; letter-spacing: 0.18em; color: #285A7C">YOUR CARE TEAM</div>
+<h2 style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 52px; line-height: 1.05; font-weight: 600">Eduardo Valdes, MD</h2>
+<div style="font-size: 18px; font-weight: 700; color: #4A5561">Obstetrician &amp; Gynecologist</div>
+<p style="margin: 0; font-size: 18px; line-height: 30px; color: #4A5561; max-width: 640px">At Collaborative Women's Care, we seek to provide the highest level of care. Our focus is to individualize the needs and demands of each patient in a warm and caring environment.</p>
+<p style="margin: 0; font-size: 18px; line-height: 30px; color: #4A5561; max-width: 640px">Dr. Valdes leads a full-service OB-GYN practice for girls and women aged 12 to 65 and older, from primary gynecologic care to pregnancy, fertility and menopause.</p>
+<div style="display: flex; gap: 16px; padding-top: 8px">
+<a href="#provider" style="background: #285A7C; color: #FFFFFF; text-decoration: none; border-radius: 999px; padding: 15px 30px; font-size: 16px; font-weight: 700">Meet Dr. Valdes</a>
+<a href="#book" style="border: 2px solid #285A7C; color: #285A7C; text-decoration: none; border-radius: 999px; padding: 13px 28px; font-size: 16px; font-weight: 700">Book a visit</a>
+</div>
+</div>
+</section>
+
+<section style="padding: 0 80px">
+<div style="background: #E7C6BC; border-radius: 24px; padding: 72px 64px; display: flex; flex-direction: column; gap: 40px">
+<div style="display: flex; justify-content: space-between; align-items: flex-end">
+<div style="display: flex; flex-direction: column; gap: 14px">
+<div style="font-family: 'Josefin Sans', Arial, sans-serif; font-size: 14px; font-weight: 600; letter-spacing: 0.18em; color: #1B2E4A">WORDS FROM OUR PATIENTS</div>
+<h2 style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 52px; line-height: 1.05; font-weight: 600">4.94 out of 5, from 481 reviews</h2>
+</div>
+<a href="#testimonials" style="font-size: 16px; font-weight: 700; color: #1B2E4A">Read all reviews →</a>
+</div>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px">
+<sc-for list="{{reviews}}" as="r" hint-placeholder-count="3">
+<figure style="margin: 0; background: #FFFFFF; border-radius: 16px; padding: 32px; display: flex; flex-direction: column; gap: 18px">
+<div style="color: #285A7C; font-size: 18px; letter-spacing: 2px" aria-label="5 out of 5 stars">★★★★★</div>
+<blockquote style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 26px; line-height: 1.2; font-weight: 600; color: #1B2E4A">“{{r.quote}}”</blockquote>
+<figcaption style="font-size: 15px; color: #4A5561">{{r.name}} · {{r.source}}</figcaption>
+</figure>
+</sc-for>
+</div>
+</div>
+</section>
+
+<section id="blog" style="padding: 112px 80px 96px; display: flex; flex-direction: column; gap: 40px">
+<div style="display: flex; justify-content: space-between; align-items: flex-end">
+<div style="display: flex; flex-direction: column; gap: 14px">
+<div style="font-family: 'Josefin Sans', Arial, sans-serif; font-size: 14px; font-weight: 600; letter-spacing: 0.18em; color: #285A7C">FROM OUR BLOG</div>
+<h2 style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 52px; line-height: 1.05; font-weight: 600">Answers to common questions</h2>
+</div>
+<a href="#blog-all" style="font-size: 16px; font-weight: 700">All articles →</a>
+</div>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px">
+<sc-for list="{{posts}}" as="p" hint-placeholder-count="3">
+<a href="#post" style="background: #FFFFFF; border: 1px solid #DCD6CC; border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; text-decoration: none; color: #1B2E4A">
+<div style="height: 200px; background: {{p.tint}}; display: flex; align-items: center; justify-content: center; color: #4A5561; font-size: 14px">[Article image]</div>
+<div style="padding: 28px; display: flex; flex-direction: column; gap: 12px">
+<div style="font-size: 20px; line-height: 28px; font-weight: 700">{{p.title}}</div>
+<div style="font-size: 16px; line-height: 25px; color: #4A5561">{{p.text}}</div>
+<div style="font-size: 15px; font-weight: 700; color: #285A7C">Read article →</div>
+</div>
+</a>
+</sc-for>
+</div>
+</section>
+
+<section id="visit" style="background: #1B2E4A; color: #FAF7F2; padding: 96px 80px; display: flex; gap: 64px">
+<div style="width: 520px; display: flex; flex-direction: column; gap: 24px">
+<div style="font-family: 'Josefin Sans', Arial, sans-serif; font-size: 14px; font-weight: 600; letter-spacing: 0.18em; color: #8BBBDA">VISIT US</div>
+<h2 style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 52px; line-height: 1.05; font-weight: 600; color: #FAF7F2">We're here when you need us</h2>
+<p style="margin: 0; font-size: 18px; line-height: 30px; color: #C9D3DC">Call us today or book online. New patients welcome.</p>
+<div style="display: flex; gap: 16px">
+<a href="#book" style="background: #8BBBDA; color: #1B2E4A; text-decoration: none; border-radius: 999px; padding: 15px 30px; font-size: 16px; font-weight: 700">Book online</a>
+<a href="tel:3052003878" style="border: 2px solid #8BBBDA; color: #8BBBDA; text-decoration: none; border-radius: 999px; padding: 13px 28px; font-size: 16px; font-weight: 700">305-200-3878</a>
+</div>
+</div>
+<div style="flex-grow: 1; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px">
+<div style="background: #22385A; border-radius: 16px; padding: 32px; display: flex; flex-direction: column; gap: 12px">
+<div style="font-size: 18px; font-weight: 700; color: #FAF7F2">Location</div>
+<div style="font-size: 16px; line-height: 26px; color: #C9D3DC">3659 South Miami Ave, Suite 6006<br>Miami, FL 33133</div>
+<a href="#directions" style="font-size: 15px; font-weight: 700; color: #8BBBDA">Get directions →</a>
+<div style="font-size: 18px; font-weight: 700; color: #FAF7F2; padding-top: 12px">Contact</div>
+<div style="font-size: 16px; line-height: 26px; color: #C9D3DC">Phone 305-200-3878<br>Fax 305-290-1017</div>
+</div>
+<div style="background: #22385A; border-radius: 16px; padding: 32px; display: flex; flex-direction: column; gap: 12px">
+<div style="font-size: 18px; font-weight: 700; color: #FAF7F2">Office hours</div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 8px; font-size: 16px; color: #C9D3DC">
+<span>Monday</span><span>9:00 am – 5:00 pm</span>
+<span>Tuesday</span><span>9:00 am – 5:00 pm</span>
+<span>Wednesday</span><span>9:00 am – 5:00 pm</span>
+<span>Thursday</span><span>9:00 am – 5:00 pm</span>
+<span>Friday</span><span>9:00 am – 3:30 pm</span>
+<span>Sat – Sun</span><span>Closed</span>
+</div>
+</div>
+</div>
+</section>
+
+<footer style="background: #14243B; color: #C9D3DC; padding: 56px 80px; display: flex; justify-content: space-between; align-items: center; flex-grow: 1">
+<div style="display: flex; gap: 24px; align-items: center">
+<div style="width: 96px; height: 96px; border-radius: 50%; background: #FAF7F2; display: flex; align-items: center; justify-content: center"><img src="assets/img/cwc-logo-transparent.png" alt="Collaborative Women's Care" style="width: 80px; height: 82px; object-fit: contain"></div>
+<div style="font-size: 14px; line-height: 22px">© 2026 Collaborative Women's Care<br>Obstetrics and Gynecology · Miami, FL</div>
+</div>
+<nav style="display: flex; gap: 28px; font-size: 14px">
+<a href="#privacy" style="color: #C9D3DC">Privacy policy</a>
+<a href="#terms" style="color: #C9D3DC">Terms &amp; conditions</a>
+<a href="#accessibility" style="color: #C9D3DC">Accessibility</a>
+<a href="https://www.instagram.com/collaborative_womens_care/" style="color: #8BBBDA">Instagram</a>
+<a href="https://www.facebook.com/eduardo.valdes.16121471/" style="color: #8BBBDA">Facebook</a>
+</nav>
+</footer>
+</div>
+</template>
+<script type="text/plain" id="s-desk">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      services: [
+        { title: 'Pregnancy & obstetrics', text: 'Personalized care from your first visit to delivery and beyond.', icon: 'M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z' },
+        { title: 'Gynecology & well-woman exams', text: 'Annual exams, screenings and everyday gynecologic care.', icon: 'M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z M9 12l2 2 4-4' },
+        { title: '3D/4D ultrasound imaging', text: 'See your baby in rich detail, right here in our office.', icon: 'M3 5h18v12H3z M8 21h8 M12 17v4 M12 8a3 3 0 1 0 0 6 3 3 0 0 0 0-6z' },
+        { title: 'Fertility & infertility', text: 'Guidance and treatment when you are ready to grow your family.', icon: 'M7 20h10 M12 20v-8 M12 12c0-4 3-6 7-6 0 4-3 6-7 6z M12 14c0-3-2-5-6-5 0 3 2 5 6 5z' },
+        { title: 'Endometriosis & PCOS', text: 'Diagnosis and relief for painful or irregular cycles.', icon: 'M22 12h-4l-3 9L9 3l-3 9H2' },
+        { title: 'Fibroids & pelvic pain', text: 'Finding the cause, and a treatment plan that fits your life.', icon: 'M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z M12 7v5l3 3' },
+        { title: 'Birth control & family planning', text: 'Counseling to find the method that is right for you.', icon: 'M3 4h18v18H3z M16 2v4 M8 2v4 M3 10h18' },
+        { title: 'Menopause & hormone therapy', text: 'Support and hormone therapy through every transition.', icon: 'M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8z M12 2v2 M12 20v2 M4.9 4.9l1.4 1.4 M17.7 17.7l1.4 1.4 M2 12h2 M20 12h2 M4.9 19.1l1.4-1.4 M17.7 6.3l1.4-1.4' }
+      ],
+      reviews: [
+        { quote: 'Hands down, literally the ABSOLUTE BEST Dr. I’ve ever been to.', name: 'Mary S.', source: 'Google' },
+        { quote: 'Dr. Valdes is a wonderful, kind, compassionate, and professional OBGYN.', name: 'Monica H.', source: 'Google' },
+        { quote: 'Dr. Valdés and his staff are wonderful. They are thorough, caring and very efficient.', name: 'Iraida C.', source: 'Healthgrades' }
+      ],
+      posts: [
+        { title: '3 reasons your birth control may not be working as expected', text: 'Everyday factors can quietly compromise protection. Here is what to watch for.', tint: '#E8F2F8' },
+        { title: 'Preparing your body for pregnancy: 5 steps to take this spring', text: 'Planning to grow your family? Start with these five essential steps.', tint: '#E7C6BC' },
+        { title: 'Abnormal bleeding between periods: when should you be concerned?', text: 'When to worry, and the treatments that can help.', tint: '#E8F2F8' }
+      ]
+    };
+  }
+}
+</script>
+<template id="t-mob">
+<div style="width: 390px; height: 3060px; box-sizing: border-box; background: #FAF7F2; font-family: 'Nunito Sans', 'Helvetica Neue', Arial, sans-serif; color: #1B2E4A; display: flex; flex-direction: column">
+
+<header style="height: 84px; background: #FFFFFF; border-bottom: 1px solid #DCD6CC; display: flex; align-items: center; justify-content: space-between; padding: 0 16px">
+<a href="#top" aria-label="Collaborative Women's Care home" style="display: flex"><img src="assets/img/cwc-logo-transparent.png" alt="Collaborative Women's Care" style="width: 68px; height: 69px; object-fit: contain"></a>
+<div style="display: flex; gap: 8px; align-items: center">
+<a href="#book" style="background: #285A7C; color: #FFFFFF; text-decoration: none; border-radius: 999px; padding: 12px 20px; font-size: 15px; font-weight: 700">Book online</a>
+<button aria-label="Open menu" style="width: 48px; height: 48px; border-radius: 50%; border: 1px solid #DCD6CC; background: #FAF7F2; display: flex; align-items: center; justify-content: center">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1B2E4A" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16 M4 12h16 M4 17h16"></path></svg>
+</button>
+</div>
+</header>
+
+<section style="position: relative; padding: 40px 16px 48px; display: flex; flex-direction: column; gap: 18px; overflow: hidden">
+<div style="position: absolute; right: -120px; top: -120px; width: 300px; height: 300px; border-radius: 50%; background: #E8F2F8"></div>
+<div style="position: relative; font-family: 'Josefin Sans', Arial, sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 0.18em; color: #285A7C">OB-GYN · MIAMI</div>
+<h1 style="position: relative; margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 46px; line-height: 1; font-weight: 600">Personalized women's care. For you. With you.</h1>
+<p style="position: relative; margin: 0; font-size: 17px; line-height: 27px; color: #4A5561">From well-woman exams and pregnancy to 3D/4D ultrasound and menopause care, in a warm and caring environment.</p>
+<a href="#book" style="position: relative; background: #285A7C; color: #FFFFFF; text-decoration: none; border-radius: 999px; padding: 16px; font-size: 16px; font-weight: 700; text-align: center">Book online</a>
+<a href="tel:3052003878" style="position: relative; border: 2px solid #285A7C; color: #285A7C; text-decoration: none; border-radius: 999px; padding: 14px; font-size: 16px; font-weight: 700; text-align: center">Call 305-200-3878</a>
+<div style="position: relative; font-size: 15px; color: #4A5561"><span style="color: #285A7C; letter-spacing: 2px" aria-hidden="true">★★★★★</span> <b style="color: #1B2E4A">4.94</b> from 481 reviews</div>
+<div style="position: relative; height: 280px; border-radius: 16px; background: #FFFFFF; border: 1px solid #DCD6CC; display: flex; align-items: center; justify-content: center; color: #4A5561; font-size: 14px; text-align: center; padding: 24px; box-sizing: border-box">[Photo: Dr. Valdes with a patient]</div>
+</section>
+
+<section style="background: #E8F2F8; padding: 48px 16px; display: flex; flex-direction: column; gap: 20px">
+<div style="font-family: 'Josefin Sans', Arial, sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 0.18em; color: #285A7C">WHAT WE OFFER</div>
+<h2 style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 36px; line-height: 1.05; font-weight: 600">Care for every stage of life</h2>
+<div style="display: flex; flex-direction: column; gap: 12px">
+<sc-for list="{{services}}" as="s" hint-placeholder-count="6">
+<a href="#service" style="background: #FFFFFF; border-radius: 14px; padding: 16px; display: flex; gap: 14px; align-items: center; text-decoration: none; color: #1B2E4A; min-height: 64px; box-sizing: border-box">
+<div style="width: 44px; height: 44px; border-radius: 50%; background: #E8F2F8; display: flex; align-items: center; justify-content: center; flex-shrink: 0">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#285A7C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="{{s.icon}}"></path></svg>
+</div>
+<div style="font-size: 17px; font-weight: 700; flex-grow: 1">{{s.title}}</div>
+<div style="color: #285A7C; font-size: 18px" aria-hidden="true">›</div>
+</a>
+</sc-for>
+</div>
+<a href="#all-services" style="font-size: 16px; font-weight: 700; padding-top: 4px">View all services →</a>
+</section>
+
+<section style="padding: 48px 16px; display: flex; flex-direction: column; gap: 16px">
+<div style="height: 320px; border-radius: 16px; background: #E7C6BC; display: flex; align-items: center; justify-content: center; color: #1B2E4A; font-size: 14px">[Portrait: Eduardo Valdes, MD]</div>
+<div style="font-family: 'Josefin Sans', Arial, sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 0.18em; color: #285A7C; padding-top: 8px">YOUR CARE TEAM</div>
+<h2 style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 36px; line-height: 1.05; font-weight: 600">Eduardo Valdes, MD</h2>
+<p style="margin: 0; font-size: 16px; line-height: 26px; color: #4A5561">We seek to provide the highest level of care, individualized to each patient, in a warm and caring environment.</p>
+<a href="#provider" style="font-size: 16px; font-weight: 700">Meet Dr. Valdes →</a>
+</section>
+
+<section style="padding: 0 16px 48px">
+<figure style="margin: 0; background: #E7C6BC; border-radius: 16px; padding: 28px 24px; display: flex; flex-direction: column; gap: 14px">
+<div style="color: #1B2E4A; letter-spacing: 2px" aria-label="5 out of 5 stars">★★★★★</div>
+<blockquote style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 26px; line-height: 1.15; font-weight: 600">“Dr. Valdes is a wonderful, kind, compassionate, and professional OBGYN.”</blockquote>
+<figcaption style="font-size: 14px; color: #1B2E4A">Monica H. · Google review</figcaption>
+</figure>
+</section>
+
+<section style="background: #1B2E4A; color: #FAF7F2; padding: 48px 16px; display: flex; flex-direction: column; gap: 16px">
+<div style="font-family: 'Josefin Sans', Arial, sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 0.18em; color: #8BBBDA">VISIT US</div>
+<h2 style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 36px; line-height: 1.05; font-weight: 600; color: #FAF7F2">We're here when you need us</h2>
+<div style="font-size: 16px; line-height: 26px; color: #C9D3DC">3659 South Miami Ave, Suite 6006<br>Miami, FL 33133</div>
+<div style="font-size: 16px; line-height: 26px; color: #C9D3DC">Mon–Thu 9:00 am–5:00 pm<br>Fri 9:00 am–3:30 pm · Sat–Sun closed</div>
+<a href="#book" style="background: #8BBBDA; color: #1B2E4A; text-decoration: none; border-radius: 999px; padding: 16px; font-size: 16px; font-weight: 700; text-align: center">Book online</a>
+<a href="tel:3052003878" style="border: 2px solid #8BBBDA; color: #8BBBDA; text-decoration: none; border-radius: 999px; padding: 14px; font-size: 16px; font-weight: 700; text-align: center">Call 305-200-3878</a>
+</section>
+
+<footer style="background: #14243B; color: #C9D3DC; padding: 32px 16px; display: flex; flex-direction: column; gap: 16px; flex-grow: 1; font-size: 14px">
+<div style="width: 80px; height: 80px; border-radius: 50%; background: #FAF7F2; display: flex; align-items: center; justify-content: center"><img src="assets/img/cwc-logo-transparent.png" alt="Collaborative Women's Care" style="width: 66px; height: 67px; object-fit: contain"></div>
+<div>© 2026 Collaborative Women's Care</div>
+<div style="display: flex; gap: 20px; flex-wrap: wrap"><a href="#privacy" style="color: #C9D3DC">Privacy</a><a href="#terms" style="color: #C9D3DC">Terms</a><a href="#accessibility" style="color: #C9D3DC">Accessibility</a><a href="https://21219.portal.athenahealth.com/" style="color: #8BBBDA">Patient portal</a></div>
+</footer>
+</div>
+</template>
+<script type="text/plain" id="s-mob">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      services: [
+        { title: 'Pregnancy & obstetrics', icon: 'M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z' },
+        { title: 'Gynecology & well-woman', icon: 'M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z M9 12l2 2 4-4' },
+        { title: '3D/4D ultrasound', icon: 'M3 5h18v12H3z M8 21h8 M12 17v4 M12 8a3 3 0 1 0 0 6 3 3 0 0 0 0-6z' },
+        { title: 'Fertility & infertility', icon: 'M7 20h10 M12 20v-8 M12 12c0-4 3-6 7-6 0 4-3 6-7 6z M12 14c0-3-2-5-6-5 0 3 2 5 6 5z' },
+        { title: 'Birth control', icon: 'M3 4h18v18H3z M16 2v4 M8 2v4 M3 10h18' },
+        { title: 'Menopause & hormones', icon: 'M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8z M12 2v2 M12 20v2 M4.9 4.9l1.4 1.4 M17.7 17.7l1.4 1.4 M2 12h2 M20 12h2 M4.9 19.1l1.4-1.4 M17.7 6.3l1.4-1.4' }
+      ]
+    };
+  }
+}
+</script>
+<script src="assets/js/dc-lite.js"></script>
+<script>
+(function () {
+  dcMount('t-desk', 's-desk', 'dbox');
+  dcMount('t-mob', 's-mob', 'mbox');
+  var dwrap = document.getElementById('dwrap'), dbox = document.getElementById('dbox');
+  function fit() {
+    var avail = Math.min(1440, document.documentElement.clientWidth - 40);
+    var k = avail / 1440;
+    var h = dbox.firstElementChild ? dbox.firstElementChild.offsetHeight : 4000;
+    dbox.style.transform = 'scale(' + k + ')';
+    dwrap.style.width = (1440 * k) + 'px';
+    dwrap.style.height = (h * k) + 'px';
+  }
+  function mode(m) {
+    var mob = m === 'mobile';
+    document.getElementById('v-desk').hidden = mob;
+    document.getElementById('v-mob').hidden = !mob;
+    document.getElementById('b-desk').setAttribute('aria-pressed', mob ? 'false' : 'true');
+    document.getElementById('b-mob').setAttribute('aria-pressed', mob ? 'true' : 'false');
+    try { sessionStorage.setItem('cwc-view', m); } catch (e) {}
+    if (!mob) fit();
+  }
+  document.getElementById('b-desk').addEventListener('click', function () { mode('desktop'); });
+  document.getElementById('b-mob').addEventListener('click', function () { mode('mobile'); });
+  // Links inside the mockup: in-page anchors scroll; placeholders do nothing; real sites open in a new tab.
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('.mock a[href]');
+    if (!a) return;
+    var href = a.getAttribute('href');
+    if (href.charAt(0) === '#') {
+      e.preventDefault();
+      var box = a.closest('.mock'), t = href.length > 1 ? box.querySelector('[id="' + href.slice(1) + '"]') : null;
+      if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else if (/^https?:/.test(href)) { a.target = '_blank'; a.rel = 'noopener'; }
+    else if (/^tel:/.test(href)) { e.preventDefault(); }
+  });
+  window.addEventListener('resize', fit);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+  var saved = null; try { saved = sessionStorage.getItem('cwc-view'); } catch (e) {}
+  mode(saved || (window.innerWidth < 900 ? 'mobile' : 'desktop'));
+  setTimeout(fit, 300);
+})();
+</script>
+</body>
+</html>
