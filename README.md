@@ -15,12 +15,14 @@ A private review site for the Collaborative Women's Care team. It holds:
 
 ## View it
 
-**On your computer (no setup):** download the ZIP (GitHub: *Code › Download ZIP*), unzip it, and double-click `index.html`. Fonts load from Google Fonts, so stay online for the full look.
+**On your computer:** double-click `index.html`. Fonts load from Google Fonts, so stay online for the full look.
 
-**As a private link (GitHub Pages):**
-1. Create a **private** repository and upload these files, keeping the folder structure.
+**As a link (GitHub Pages):**
+1. Upload the four `.html` files (plus this README) to the top level of the repository. There are no folders to upload: each page carries its own styles, scripts and logo.
 2. *Settings › Pages › Build and deployment*: Source **Deploy from a branch**, branch **main**, folder **/ (root)**.
-3. Open the address GitHub shows. (Pages on a private repository needs a paid GitHub plan; on a free plan the repository must be public, and then anyone with the link can reach the site. The phrase still gates it, but it isn't real protection.)
+3. Wait a minute, then open `https://<your-username>.github.io/<repo-name>/`. A hard refresh (Ctrl + F5) clears an old cached version.
+
+(Pages on a private repository needs a paid GitHub plan. On a free plan the repository must be public, so anyone with the link can reach the site. The phrase still gates it, but it isn't real protection.)
 
 ## Using the pages
 
@@ -31,18 +33,13 @@ A private review site for the Collaborative Women's Care team. It holds:
 ## Structure
 
 ```
-index.html            welcome + access gate
-brand-guide.html      17 slides, 1920×1080, scaled to fit
-homepage-v1.html      mockup, desktop 1440 + mobile 390
-homepage-v2.html      mockup, desktop 1440 + mobile 390, interactive
-assets/
-  css/site.css        brand tokens (8 colors, 3 fonts) + shared UI
-  js/gate.js          access phrase check (SHA-256, stored as a hash)
-  js/dc-lite.js       tiny renderer for the mockups ({{holes}}, loops, clicks)
-  img/                logo: transparent PNG, white-background JPG
+index.html          welcome screen + access gate + logo downloads
+brand-guide.html    17 slides, 1920×1080, scaled to fit
+homepage-v1.html    mockup, desktop 1440 + mobile 390
+homepage-v2.html    mockup, desktop 1440 + mobile 390, interactive
 ```
 
-No build step, no dependencies. Every page is plain HTML, CSS and JavaScript.
+Each page is self-contained: brand styles, the access-phrase check (stored as a SHA-256 hash), the small mockup renderer and the logo are all built in. There's no build step and nothing to install.
 
 ## The brand in brief
 
