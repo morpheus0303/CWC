@@ -36,6 +36,7 @@
 }
 *, *::before, *::after { box-sizing: border-box; }
 html, body { margin: 0; }
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 body {
   background: var(--cream);
   color: var(--navy);
@@ -92,6 +93,18 @@ img { max-width: 100%; }
 .seg [aria-pressed="true"], .seg [aria-current="page"] { background: var(--sky); color: var(--navy); }
 .tip { color: var(--on-navy); font-size: 13px; }
 .tip b { color: #fff; }
+
+/* ---------- touch screens: 44px targets ---------- */
+@media (pointer: coarse) {
+  .reviewbar .back, .seg button, .seg a, .linkbtn, .btn.small { min-height: 44px; }
+}
+/* ---------- phones: compact review bar ---------- */
+@media (max-width: 700px) {
+  .reviewbar { padding: 8px 12px; gap: 8px; }
+  .reviewbar .tip, .reviewbar .badge2, .reviewbar .section-label { display: none; }
+  .reviewbar .title { font-size: 18px; }
+  .reviewbar .left, .reviewbar .right { gap: 8px; }
+}
 
 </style>
 <script>
@@ -196,6 +209,7 @@ body { background: #EFEAE2; }
 .pv [hidden] { display: none !important; }
 .badge2 { background: var(--sky); color: var(--navy); font: 700 12px var(--font-sans); padding: 4px 10px; border-radius: 999px; }
 .mock button { font-family: inherit; cursor: pointer; }
+@media (pointer: coarse) { .mock footer a { display: inline-block; padding: 11px 0; } }
 @media (max-width: 460px) { .phone { width: 100%; border-radius: 0; padding: 0; background: none; box-shadow: none; } .phone::before { display: none; } .phone .screen { width: 100%; border-radius: 0; height: auto; padding-top: 0; overflow: visible; } .view { padding: 0 0 40px; } }
 
 /* from the artboard */
@@ -233,7 +247,7 @@ body { background: #EFEAE2; }
   </section>
 </main>
 <template id="t-desk">
-<div style="width: 1440px; height: 3900px; box-sizing: border-box; background: #FAF7F2; font-family: 'Nunito Sans', 'Helvetica Neue', Arial, sans-serif; color: #1B2E4A; display: flex; flex-direction: column">
+<div style="width: 1440px; min-height: 4700px; box-sizing: border-box; background: #FAF7F2; font-family: 'Nunito Sans', 'Helvetica Neue', Arial, sans-serif; color: #1B2E4A; display: flex; flex-direction: column">
 
 <header style="height: 104px; display: flex; align-items: center; justify-content: space-between; padding: 0 96px; border-bottom: 1px solid #DCD6CC">
 <div style="display: flex; align-items: center; gap: 56px">
@@ -265,7 +279,7 @@ body { background: #EFEAE2; }
 <div style="width: 660px; display: flex; flex-direction: column; gap: 32px">
 <div style="font-family: 'Josefin Sans', Arial, sans-serif; font-size: 14px; font-weight: 600; letter-spacing: 0.22em; color: #285A7C">OBSTETRICS &amp; GYNECOLOGY · MIAMI</div>
 <h1 style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; font-size: 124px; line-height: 0.92; letter-spacing: -1px; color: #1B2E4A">{{t.h1a}}<br><span style="font-style: italic; color: #285A7C">{{t.h1b}}</span></h1>
-<p style="margin: 0; font-size: 21px; line-height: 34px; color: #4A5561; max-width: 540px">{{t.sub}}</p>
+<p style="margin: 0; font-size: 21px; line-height: 34px; color: #4A5561; max-width: 540px; width: 525px; min-height: 74px; white-space: pre-line">{{t.sub}}</p>
 <div style="display: flex; gap: 16px; align-items: center">
 <a href="#book" style="background: #285A7C; color: #FFFFFF; text-decoration: none; border-radius: 999px; padding: 18px 36px; font-size: 16px; font-weight: 700">{{t.book}}</a>
 <a href="#journey" style="color: #1B2E4A; font-size: 16px; font-weight: 700; padding: 18px 8px">{{t.explore}} ↓</a>
@@ -355,17 +369,17 @@ body { background: #EFEAE2; }
 <a href="#dr-valdes" style="text-decoration: none; color: #1B2E4A; display: flex; flex-direction: column; gap: 20px">
 <div style="height: 460px; border-radius: 200px 200px 20px 20px; background: #E8F2F8; display: flex; align-items: flex-end; justify-content: center; padding: 32px; box-sizing: border-box; color: #4A5561; font-size: 14px">[Portrait: Eduardo Valdes, MD]</div>
 <div style="display: flex; flex-direction: column; gap: 6px">
-<div style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 32px; font-weight: 600">Eduardo Valdes, MD</div>
-<div style="font-size: 16px; color: #4A5561">Obstetrician &amp; Gynecologist</div>
-<div style="font-size: 15px; font-weight: 700; color: #285A7C; padding-top: 6px">Meet Dr. Valdes →</div>
+<div style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 32px; font-weight: 600; text-align: center">Eduardo Valdes, MD</div>
+<div style="font-size: 16px; color: #4A5561; text-align: center">Obstetrician &amp; Gynecologist</div>
+<div style="font-size: 15px; font-weight: 700; color: #285A7C; padding-top: 6px; text-align: center">Meet Dr. Valdes →</div>
 </div>
 </a>
 <a href="#dr-camp" style="text-decoration: none; color: #1B2E4A; display: flex; flex-direction: column; gap: 20px">
 <div style="height: 460px; border-radius: 200px 200px 20px 20px; background: #E7C6BC; display: flex; align-items: flex-end; justify-content: center; padding: 32px; box-sizing: border-box; color: #1B2E4A; font-size: 14px">[Portrait: Bertha Campo, MD]</div>
 <div style="display: flex; flex-direction: column; gap: 6px">
-<div style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 32px; font-weight: 600">Bertha Campo, MD</div>
-<div style="font-size: 16px; color: #4A5561">Obstetrician &amp; Gynecologist</div>
-<div style="font-size: 15px; font-weight: 700; color: #285A7C; padding-top: 6px">Meet Dr. Campo →</div>
+<div style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 32px; font-weight: 600; text-align: center">Bertha Campo, MD</div>
+<div style="font-size: 16px; color: #4A5561; text-align: center">Obstetrician &amp; Gynecologist</div>
+<div style="font-size: 15px; font-weight: 700; color: #285A7C; padding-top: 6px; text-align: center">Meet Dr. Campo →</div>
 </div>
 </a>
 </div>
@@ -377,8 +391,8 @@ body { background: #EFEAE2; }
 <div style="font-size: 16px; color: #4A5561">{{rev.name}} · {{rev.source}} review</div>
 <div style="display: flex; gap: 16px; align-items: center">
 <button onClick="{{prevRev}}" aria-label="Previous review" style="width: 52px; height: 52px; border-radius: 50%; border: 1px solid #DCD6CC; background: #FAF7F2; color: #1B2E4A; font-size: 20px">←</button>
-<div style="font-size: 15px; color: #4A5561; width: 64px">{{revPos}}</div>
-<button onClick="{{nextRev}}" aria-label="Next review" style="width: 52px; height: 52px; border-radius: 50%; border: 1px solid #DCD6CC; background: #FAF7F2; color: #1B2E4A; font-size: 20px">→</button>
+<div style="font-size: 15px; color: #4A5561; width: 64px">{{revPos}}</div><button onClick="{{nextRev}}" aria-label="Next review" style="width: 52px; height: 52px; border-radius: 50%; border: 1px solid #DCD6CC; background: #FAF7F2; color: #1B2E4A; font-size: 20px">→</button>
+
 </div>
 </section>
 
@@ -431,7 +445,7 @@ class Component extends DCLogic {
   renderVals() {
     var self = this;
     var T = {
-      en: { h1a: 'For you.', h1b: 'With you.', sub: 'Personal OB-GYN care in Miami, from your first exam to motherhood and beyond.', book: 'Book online', explore: 'Find your care' },
+      en: { h1a: 'For you.', h1b: 'With you.', sub: 'Personal OB-GYN care in Miami:\n\nFrom your first exam to motherhood and beyond.', book: 'Book online', explore: 'Find your care' },
       es: { h1a: 'Para ti.', h1b: 'Contigo.', sub: 'Atención ginecológica y obstétrica personalizada en Miami, desde tu primera consulta hasta la maternidad y más allá.', book: 'Reservar cita', explore: 'Encuentra tu atención' },
       ru: { h1a: 'Для вас.', h1b: 'Вместе с вами.', sub: 'Индивидуальная помощь акушера-гинеколога в Майами — от первого осмотра до материнства и дальше.', book: 'Записаться', explore: 'Подобрать помощь' },
       fr: { h1a: 'Pour vous.', h1b: 'Avec vous.', sub: 'Des soins de gynécologie et d’obstétrique personnalisés à Miami, de votre premier examen à la maternité et au-delà.', book: 'Prendre rendez-vous', explore: 'Trouver vos soins' }
@@ -469,7 +483,7 @@ class Component extends DCLogic {
 }
 </script>
 <template id="t-mob">
-<div style="width: 390px; height: 2960px; box-sizing: border-box; background: #FAF7F2; font-family: 'Nunito Sans', 'Helvetica Neue', Arial, sans-serif; color: #1B2E4A; display: flex; flex-direction: column">
+<div style="width: 100%; max-width: 390px; margin: 0 auto; min-height: 3220px; box-sizing: border-box; background: #FAF7F2; font-family: 'Nunito Sans', 'Helvetica Neue', Arial, sans-serif; color: #1B2E4A; display: flex; flex-direction: column">
 
 <header style="height: 76px; display: flex; align-items: center; justify-content: space-between; padding: 0 16px; border-bottom: 1px solid #DCD6CC">
 <a href="#top" aria-label="Collaborative Women's Care home" style="display: flex"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-logo alt="Collaborative Women's Care" style="width: 60px; height: 61px; object-fit: contain"></a>
@@ -720,7 +734,8 @@ class Component extends DCLogic {
   window.addEventListener('resize', fit);
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
   var saved = null; try { saved = sessionStorage.getItem('cwc-view'); } catch (e) {}
-  mode(saved || (window.innerWidth < 900 ? 'mobile' : 'desktop'));
+  var narrow = window.innerWidth < 700;
+  mode(narrow ? 'mobile' : (saved || (window.innerWidth < 900 ? 'mobile' : 'desktop')));
   setTimeout(fit, 300);
 })();
 </script>

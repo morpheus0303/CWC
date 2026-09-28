@@ -36,6 +36,7 @@
 }
 *, *::before, *::after { box-sizing: border-box; }
 html, body { margin: 0; }
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 body {
   background: var(--cream);
   color: var(--navy);
@@ -92,6 +93,18 @@ img { max-width: 100%; }
 .seg [aria-pressed="true"], .seg [aria-current="page"] { background: var(--sky); color: var(--navy); }
 .tip { color: var(--on-navy); font-size: 13px; }
 .tip b { color: #fff; }
+
+/* ---------- touch screens: 44px targets ---------- */
+@media (pointer: coarse) {
+  .reviewbar .back, .seg button, .seg a, .linkbtn, .btn.small { min-height: 44px; }
+}
+/* ---------- phones: compact review bar ---------- */
+@media (max-width: 700px) {
+  .reviewbar { padding: 8px 12px; gap: 8px; }
+  .reviewbar .tip, .reviewbar .badge2, .reviewbar .section-label { display: none; }
+  .reviewbar .title { font-size: 18px; }
+  .reviewbar .left, .reviewbar .right { gap: 8px; }
+}
 
 </style>
 <script>
@@ -196,6 +209,7 @@ body { background: #EFEAE2; }
 .pv [hidden] { display: none !important; }
 .badge2 { background: var(--sky); color: var(--navy); font: 700 12px var(--font-sans); padding: 4px 10px; border-radius: 999px; }
 .mock button { font-family: inherit; cursor: pointer; }
+@media (pointer: coarse) { .mock footer a { display: inline-block; padding: 11px 0; } }
 @media (max-width: 460px) { .phone { width: 100%; border-radius: 0; padding: 0; background: none; box-shadow: none; } .phone::before { display: none; } .phone .screen { width: 100%; border-radius: 0; height: auto; padding-top: 0; overflow: visible; } .view { padding: 0 0 40px; } }
 
 /* from the artboard */
@@ -232,7 +246,7 @@ body { background: #EFEAE2; }
   </section>
 </main>
 <template id="t-desk">
-<div style="width: 1440px; height: 4460px; box-sizing: border-box; background: #FAF7F2; font-family: 'Nunito Sans', 'Helvetica Neue', Arial, sans-serif; color: #1B2E4A; display: flex; flex-direction: column">
+<div style="width: 1440px; min-height: 4640px; box-sizing: border-box; background: #FAF7F2; font-family: 'Nunito Sans', 'Helvetica Neue', Arial, sans-serif; color: #1B2E4A; display: flex; flex-direction: column">
 
 <div style="height: 44px; background: #1B2E4A; color: #C9D3DC; display: flex; align-items: center; justify-content: space-between; padding: 0 80px; font-size: 14px">
 <div>Mon–Thu 9:00 am–5:00 pm · Fri 9:00 am–3:30 pm</div>
@@ -273,7 +287,7 @@ body { background: #EFEAE2; }
 </div>
 </div>
 <div style="position: relative; flex-grow: 1; height: 560px; display: flex; justify-content: flex-end">
-<div style="width: 560px; height: 560px; border-radius: 24px; background: #FFFFFF; border: 1px solid #DCD6CC; display: flex; align-items: center; justify-content: center; color: #4A5561; font-size: 16px; text-align: center; padding: 40px; box-sizing: border-box">[Photo: Dr. Valdes with a patient, warm natural light]</div>
+<div style="width: 590px; height: 519px; border-radius: 24px; background: #FFFFFF; border: 1px solid #DCD6CC; display: flex; align-items: center; justify-content: center; color: #4A5561; font-size: 16px; text-align: center; padding: 40px; box-sizing: border-box">[Photo: Dr. Valdes with a patient, warm natural light]</div>
 <div style="position: absolute; left: 0; bottom: 36px; width: 320px; background: #FFFFFF; border-radius: 16px; padding: 24px; box-shadow: 0 1px 2px rgba(27,46,74,0.06), 0 8px 24px rgba(27,46,74,0.08); display: flex; flex-direction: column; gap: 10px">
 <div style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 24px; line-height: 1.15; font-weight: 600">“Absolutely the best doctor and staff!”</div>
 <div style="font-size: 14px; color: #4A5561">Danaisy A. · Google review</div>
@@ -437,7 +451,7 @@ class Component extends DCLogic {
 }
 </script>
 <template id="t-mob">
-<div style="width: 390px; height: 3060px; box-sizing: border-box; background: #FAF7F2; font-family: 'Nunito Sans', 'Helvetica Neue', Arial, sans-serif; color: #1B2E4A; display: flex; flex-direction: column">
+<div style="width: 100%; max-width: 390px; margin: 0 auto; min-height: 3370px; box-sizing: border-box; background: #FAF7F2; font-family: 'Nunito Sans', 'Helvetica Neue', Arial, sans-serif; color: #1B2E4A; display: flex; flex-direction: column">
 
 <header style="height: 84px; background: #FFFFFF; border-bottom: 1px solid #DCD6CC; display: flex; align-items: center; justify-content: space-between; padding: 0 16px">
 <a href="#top" aria-label="Collaborative Women's Care home" style="display: flex"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-logo alt="Collaborative Women's Care" style="width: 68px; height: 69px; object-fit: contain"></a>
@@ -654,7 +668,8 @@ class Component extends DCLogic {
   window.addEventListener('resize', fit);
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
   var saved = null; try { saved = sessionStorage.getItem('cwc-view'); } catch (e) {}
-  mode(saved || (window.innerWidth < 900 ? 'mobile' : 'desktop'));
+  var narrow = window.innerWidth < 700;
+  mode(narrow ? 'mobile' : (saved || (window.innerWidth < 900 ? 'mobile' : 'desktop')));
   setTimeout(fit, 300);
 })();
 </script>

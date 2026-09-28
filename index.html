@@ -36,6 +36,7 @@
 }
 *, *::before, *::after { box-sizing: border-box; }
 html, body { margin: 0; }
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 body {
   background: var(--cream);
   color: var(--navy);
@@ -93,10 +94,22 @@ img { max-width: 100%; }
 .tip { color: var(--on-navy); font-size: 13px; }
 .tip b { color: #fff; }
 
+/* ---------- touch screens: 44px targets ---------- */
+@media (pointer: coarse) {
+  .reviewbar .back, .seg button, .seg a, .linkbtn, .btn.small { min-height: 44px; }
+}
+/* ---------- phones: compact review bar ---------- */
+@media (max-width: 700px) {
+  .reviewbar { padding: 8px 12px; gap: 8px; }
+  .reviewbar .tip, .reviewbar .badge2, .reviewbar .section-label { display: none; }
+  .reviewbar .title { font-size: 18px; }
+  .reviewbar .left, .reviewbar .right { gap: 8px; }
+}
+
 </style>
 <style>
   /* ---------- gate ---------- */
-  .gate { min-height: 100vh; display: grid; place-items: center; padding: 32px 16px; position: relative; overflow: hidden; }
+  .gate { min-height: 100vh; min-height: 100svh; display: grid; place-items: center; padding: 32px 16px; position: relative; overflow: hidden; }
   .gate::before, .gate::after { content: ""; position: absolute; border-radius: 50%; pointer-events: none; }
   .gate::before { width: 720px; height: 720px; right: -260px; top: -260px; background: var(--pale); }
   .gate::after { width: 420px; height: 420px; left: -160px; bottom: -180px; border: 1px solid var(--sky); }
